@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">sMoney</string>
+    <string name="history">Lịch sử</string>
+    <string name="noti">Thông báo</string>
+    <string name="chart">Biểu đồ</string>
+    <string name="tax">Thuế TNCN</string>
+    <string name="title_activity_history_fragment">HistoryFragment</string>
+</resources>
