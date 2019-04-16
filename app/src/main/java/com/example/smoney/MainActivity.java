@@ -12,7 +12,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
-
+    private Model model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void addControls() {
+        model = new Model(this);
         toolbar = getSupportActionBar();
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
