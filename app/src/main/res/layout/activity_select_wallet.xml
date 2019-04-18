@@ -4,24 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Select_wallet">
+    tools:context=".Select_wallet"
+    >
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/cash"
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="78dp"
-        android:text="@string/Cash"
+        android:text="@string/cash"
         tools:text="Cash" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/atm"
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="169dp"
-        android:text="@string/ATM"
+        android:text="@string/atm"
         tools:text="ATM" />
+
+    <ImageButton
+        android:id="@+id/addwalletButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="90dp"
+        android:contentDescription="@string/addwallet"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="150dp"
+        android:text="@string/t_o_m_t_v_m_i" />
 
 </RelativeLayout>

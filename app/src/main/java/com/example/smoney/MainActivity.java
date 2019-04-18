@@ -1,5 +1,6 @@
 package com.example.smoney;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -8,11 +9,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         addControls();
         addEvents();
     }
+
+
 
     private void addEvents() {
         bottom_view.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

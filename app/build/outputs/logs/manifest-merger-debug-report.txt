@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/181d5f19d6327370df14f297a02eb727/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:2:1-11:12
@@ -35,25 +35,25 @@ MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gra
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90e2b2311b88e6572e968e9f4849145a/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/80a5f39eaae99f2dc92cd81cd9d6afad/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/781bb12ff8c28d5df350530a5c6f4aa9/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:5:5-25:19
 MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:9:5-20
@@ -76,32 +76,36 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongth
 		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.smoney.Select_category
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:9-62
+	android:name
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:19-50
 activity#com.example.smoney.Select_wallet
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:9-60
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:13:9-51
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:19-48
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:13:19-48
 activity#com.example.smoney.HistoryFragment
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:13:9-16:59
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:14:9-17:59
 	android:label
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:15:13-68
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:16:13-68
 	android:theme
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:16:13-56
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:14:13-44
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:15:13-44
 activity#com.example.smoney.MainActivity
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:17:9-23:20
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:17:19-47
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:18:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:22:27-74
 uses-sdk
 INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
