@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(new HistoryFragment());
                     return true;
                 case R.id.nav_notification:
-                    toolbar.setTitle("Thông báo");
                     loadFragment(new NotificationsFragment());
                     return true;
                 case R.id.nav_chart:
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
         loadFragment(new HistoryFragment());
+
     }
 
     private void loadFragment(Fragment fragment){
