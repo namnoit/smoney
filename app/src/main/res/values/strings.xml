@@ -5,4 +5,10 @@
     <string name="chart">Biểu đồ</string>
     <string name="tax">Thuế TNCN</string>
     <string name="title_activity_history_fragment">HistoryFragment</string>
+    <string name="add">TODO</string>
+    <string name="cash">Cash</string>
+    <string name="atm">ATM</string>
+    <string name="todo">TODO</string>
+    <string name="addwallet">addwallet</string>
+    <string name="t_o_m_t_v_m_i">Tạo một ví mới</string>
 </resources>
