@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addControls();
+        //addControls();
+        Not();
         addEvents();
     }
 
@@ -58,7 +59,11 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
         loadFragment(new HistoryFragment());
+    }
 
+    private void Not(){
+        bottom_view = findViewById(R.id.bottom_view);
+        loadFragment(new NotificationsFragment());
     }
 
     private void loadFragment(Fragment fragment){
