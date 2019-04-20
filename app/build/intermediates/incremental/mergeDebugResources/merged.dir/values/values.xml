@@ -578,6 +578,7 @@
     <string name="fab_transformation_sheet_behavior" translatable="false">android.support.design.transformation.FabTransformationSheetBehavior</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="history">Lịch sử</string>
+    <string name="money">TextView</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="noti">Thông báo</string>
     <string name="password_toggle_content_description">Show password</string>
@@ -587,6 +588,7 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="t_o_m_t_m_c_chi_ti_u_m_i">Tạo một mục chi tiêu mới</string>
     <string name="t_o_m_t_v_m_i">Tạo một ví mới</string>
     <string name="tax">Thuế TNCN</string>
     <string name="title_activity_history_fragment">HistoryFragment</string>
