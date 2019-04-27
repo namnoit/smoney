@@ -8,11 +8,21 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+
+import java.util.ArrayList;
+>>>>>>> feature_model
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
+<<<<<<< HEAD
 
+=======
+    private Model model;
+>>>>>>> feature_model
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +64,18 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void addControls() {
+<<<<<<< HEAD
+=======
+        model = new Model(this);
+>>>>>>> feature_model
         toolbar = getSupportActionBar();
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
         loadFragment(new HistoryFragment());
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature_model
     }
 
     private void loadFragment(Fragment fragment){
