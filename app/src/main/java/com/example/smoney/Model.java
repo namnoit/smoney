@@ -13,8 +13,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
+import static android.content.Context.MODE_PRIVATE;
+import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 public class Model {
     public static final int TYPE_IN_OTHER = 0;
@@ -40,12 +44,13 @@ public class Model {
     public static final String FIELD_COMMENT = "comment";
     private String DATABASE_NAME = "sMoneyDatabase";
     private String DB_PATH_SUFFIX = "/databases/";
-    private SQLiteDatabase database = null;
+    private SQLiteDatabase database;
     private Context context;
 
     public Model(Context ct) {
         this.context = ct;
         processCopy();
+        database = openOrCreateDatabase(context.getApplicationInfo().dataDir + DB_PATH_SUFFIX + DATABASE_NAME,null);
     }
 
     private void processCopy(){
@@ -55,7 +60,6 @@ public class Model {
                 CopyDataBaseFromAsset();
                 Toast.makeText(context, "Success", Toast.LENGTH_LONG).show();
             } catch (Exception e) {
-//                Toast.makeText(, e.toString(), Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
         }
@@ -91,7 +95,7 @@ public class Model {
         }
     }
 
-    public long add(int type, long amount, String date, String cmt){
+    public long addInOut(int type, long amount, String date, String cmt){
         ContentValues values = new ContentValues();
         values.put(FIELD_TYPE, type);
         values.put(FIELD_AMOUNT,amount);
@@ -100,29 +104,37 @@ public class Model {
         return database.insert(TABLE_IN_OUT,null,values);
     }
 
-    public void getInOut(Date begin, Date end){
-        Cursor c = database.rawQuery("select ID, Date, Hours from " + TABLE_IN_OUT + " where Date BETWEEN '" + begin + "' AND '" + end + "' ORDER BY Date ASC", null);
+    public ArrayList<Item> getInOut(String begin, String end){
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT, null);
 
+        ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {
             if  (c.moveToFirst()) {
                 do {
-                    int tempId = c.getInt(c.getColumnIndex("ID"));
-                    long tempUnixTime = c.getLong(c.getColumnIndex("Date"));
-
-                    //convert tempUnixTime to Date
-                    java.util.Date startDateDate = new java.util.Date(tempUnixTime);
-
-                    //create SimpleDateFormat formatter
-                    SimpleDateFormat formatter1;
-                    formatter1 = new SimpleDateFormat("dd/MM/yyyy", Locale.UK);
-
-                    //convert Date to SimpleDateFormat and convert to String
-                    String tempStringStartDate = formatter1.format(startDateDate);
-
-                    int tempHours = c.getInt(c.getColumnIndex("Hours"));
-//                    results.add(+ tempId + "    Date: " + tempStringStartDate + "    Hours: " + tempHours);
+                    int id = c.getInt(c.getColumnIndex(FIELD_ID));
+                    int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
+                    long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
+                    String date = c.getString(c.getColumnIndex(FIELD_DATE));
+                    String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
+                    arrItem.add(new Item(id,type,amount,date,cmt));
                 }while (c.moveToNext());
             }
         }
+        return arrItem;
+    }
+
+    public void updateInOut(int id, int type, long amount, String date, String cmt){
+        ContentValues values = new ContentValues();
+        values.put(FIELD_ID, id);
+        values.put(FIELD_TYPE, type);
+        values.put(FIELD_AMOUNT,amount);
+        values.put(FIELD_DATE,date);
+        values.put(FIELD_COMMENT,cmt);
+        database.update(TABLE_IN_OUT,values,"ID=?", new String[]{Integer.toString(id)});
+    }
+
+    public void deleteInOut(int id){
+        database.delete(TABLE_IN_OUT, "ID=?", new String[]{Integer.toString(id)});
     }
 }
+

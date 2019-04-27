@@ -8,6 +8,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
         loadFragment(new HistoryFragment());
+
     }
 
     private void loadFragment(Fragment fragment){
