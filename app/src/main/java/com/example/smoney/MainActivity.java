@@ -9,6 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
@@ -19,8 +24,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bottom_view = findViewById(R.id.bottom_view);
+        //View view;
+        //Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_Noti);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        loadFragment(new NotificationsFragment());
         //addControls();
-        Not();
+        //Not();
         addEvents();
     }
 

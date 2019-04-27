@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Notification"
+    android:theme="@style/Notification"
     android:orientation="vertical"
     >
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,8 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.AppCompatImageView
+            <ImageButton
                 android:id="@+id/backbtn"
+                android:background="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -35,8 +36,9 @@
                 android:textColor="#000000"
                 android:textSize="20sp"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/thacmac"
+                android:background="@null"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -46,111 +48,23 @@
                 />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:elevation="10dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="10dp"
-            android:paddingLeft="0dp"
-            android:src="@drawable/ic_fiber_manual_record_black_18dp" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="19:30 15/04/2019"
-                android:textStyle="italic"
-                android:paddingBottom="2dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bạn đã chi 20000 vnd cho việc ăn sáng. Số Tiền còn lại: 1000000 vnd"/>
-        </LinearLayout>
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/less_grey"/>
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:elevation="10dp"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:elevation="10dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="10dp"
-            android:paddingLeft="0dp"
-            android:src="@drawable/ic_fiber_manual_record_black_18dp" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="19:30 15/04/2019"
-                android:textStyle="italic"
-                android:paddingBottom="2dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bạn đã chi 20000 vnd cho việc ăn sáng. Số Tiền còn lại: 1000000 vnd"/>
+        android:orientation="vertical">
 
-        </LinearLayout>
+        <ListView
+            android:id="@+id/lview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/less_grey"/>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:elevation="10dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="10dp"
-            android:paddingLeft="0dp"
-            android:src="@drawable/ic_fiber_manual_record_black_18dp" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="19:30 15/04/2019"
-                android:textStyle="italic"
-                android:paddingBottom="2dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bạn đã chi 20000 vnd cho việc ăn sáng. Số Tiền còn lại: 1000000 vnd"/>
-
-        </LinearLayout>
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/less_grey"/>
 
 </LinearLayout>

@@ -10,23 +10,72 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:paddingRight="10dp"
         android:paddingLeft="0dp"
         android:src="@drawable/ic_fiber_manual_record_black_18dp" />
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="100"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/time_t"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="19:30 15/04/2019"
             android:textStyle="italic"
             android:paddingBottom="2dp"/>
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bạn đã chi 20000 vnd cho việc ăn sáng. Số Tiền còn lại: 1000000 vnd"/>
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã "/>
+            <TextView
+                android:id="@+id/action_noti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chi 20000 VND "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" cho việc "/>
+            <TextView
+                android:id="@+id/sk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="ăn sáng "/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Tổng số tiền đã chi: "/>
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000 VND "/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/less_grey"/>
     </LinearLayout>
+
 </LinearLayout>
