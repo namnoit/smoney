@@ -19,7 +19,7 @@
         tools:text="Chọn tháng cần tính" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btnthang11"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T11"
@@ -28,7 +28,7 @@
         tools:layout_editor_absoluteY="311dp" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnthang9"
         android:layout_width="80dp"
         android:layout_height="66dp"
         android:text="T9"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="310dp" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btnthang10"
         android:layout_width="83dp"
         android:layout_height="65dp"
         android:text="T10"
@@ -46,16 +46,16 @@
         tools:layout_editor_absoluteY="311dp" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/btnthang12"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T12"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="311dp" />
+        tools:layout_editor_absoluteX="308dp"
+        tools:layout_editor_absoluteY="310dp" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnthang5"
         android:layout_width="80dp"
         android:layout_height="66dp"
         android:text="T5"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="230dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnthang8"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T8"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="231dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnthang6"
         android:layout_width="83dp"
         android:layout_height="65dp"
         android:text="T6"
@@ -82,7 +82,7 @@
         tools:layout_editor_absoluteY="231dp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnthang7"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T7"
@@ -91,7 +91,7 @@
         tools:layout_editor_absoluteY="231dp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnthang4"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T4"
@@ -100,7 +100,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnthang3"
         android:layout_width="81dp"
         android:layout_height="65dp"
         android:text="T3"
@@ -109,7 +109,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnthang2"
         android:layout_width="83dp"
         android:layout_height="65dp"
         android:text="T2"
@@ -118,7 +118,7 @@
         tools:layout_editor_absoluteY="148dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnthang1"
         android:layout_width="80dp"
         android:layout_height="66dp"
         android:text="T1"
@@ -137,7 +137,7 @@
         tools:layout_editor_absoluteY="590dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/nguoiphuthuoc"
         style="@style/Base.Widget.MaterialComponents.TextInputEditText"
         android:layout_width="156dp"
         android:layout_height="45dp"
@@ -165,11 +165,12 @@
         android:layout_height="wrap_content"
         android:text="Start"
         android:textSize="24sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="222dp"
         tools:layout_editor_absoluteY="593dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/khoangiamtru"
         style="@style/Base.Widget.MaterialComponents.TextInputEditText"
         android:layout_width="156dp"
         android:layout_height="47dp"
@@ -188,7 +189,7 @@
         android:textSize="21sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="414dp"
+        tools:layout_editor_absoluteY="407dp"
         tools:text="Tổng thu nhập" />
 
     <TextView
@@ -205,7 +206,7 @@
         tools:text="Người phụ thuộc" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/tongthunhap"
         style="@style/Base.Widget.MaterialComponents.TextInputEditText"
         android:layout_width="156dp"
         android:layout_height="45dp"
