@@ -9,16 +9,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+//<<<<<<< HEAD
 import android.view.View;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+//=======
+import java.util.ArrayList;
+//>>>>>>> master
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
-
+    private Model model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void addControls() {
+        model = new Model(this);
         toolbar = getSupportActionBar();
         toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);

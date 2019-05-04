@@ -50,6 +50,7 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
+
         ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
         //ArrayAdapter<noti_item> adapter = new ArrayAdapter<noti_item>(getContext(),R.layout.row_item_dknoti,notiItems);
         ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);

@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\PauloDT\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\PauloDT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\7558cf6cc36363ca4c04d4fbb43dcb2a\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\PauloDT\\.gradle\\caches\\transforms-2\\files-2.1\\d2f54d50b3c9174a920c9766e7be434f\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\PauloDT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\fa392bd67de09b34562d387fe047eb76\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\PauloDT\\.gradle\\caches\\transforms-2\\files-2.1\\2ecf9c995035e5e1c0d27efaba0d58e1\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
