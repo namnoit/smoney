@@ -1092,9 +1092,7 @@ id dimensions
 id direct
 id disableHome
 id edit_category
-id edit_chithu
 id edit_date
-id edit_event
 id edit_note
 id edit_numofmoney
 id edit_query
@@ -1120,7 +1118,6 @@ id homeAsUp
 id icon
 id icon_group
 id id_cate_button
-id id_chithu_button
 id id_wallet_button
 id ifRoom
 id image
@@ -1214,11 +1211,9 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
-id text0
 id text1
 id text2
 id text3
-id text4
 id text5
 id text6
 id textSpacerNoButtons

@@ -26,6 +26,7 @@ public class Model {
     public static final int TYPE_IN_TRADE = 2;
     public static final int TYPE_IN_LOTTERIA = 3;
     public static final int TYPE_IN_INTEREST_RATE = 4;
+
     public static final int TYPE_OUT_OTHER = 10;
     public static final int TYPE_OUT_EATING = 11;
     public static final int TYPE_OUT_HEALTH = 12;

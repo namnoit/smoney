@@ -13,6 +13,7 @@
         android:id="@+id/edit_numofmoney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_below="@id/text1"
         android:hint="000.000"/>
 
@@ -34,34 +35,10 @@
         />
 
     <TextView
-        android:id="@+id/text0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edit_date"
-        android:text="Chi/Thu" />
-    <EditText
-        android:id="@+id/edit_chithu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="chi"
-        android:layout_below="@id/text0"
-        android:layout_alignParentStart="true"
-        />
-
-    <ImageButton
-        android:id="@+id/id_chithu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/edit_chithu"
-        android:layout_alignRight="@+id/edit_chithu"
-        android:layout_marginTop="8dp"
-        android:foreground="@android:drawable/arrow_down_float" />
-
-    <TextView
         android:id="@+id/text3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_chithu"
+        android:layout_below="@id/edit_date"
         android:text="Ghi chú" />
 
     <EditText
@@ -72,26 +49,12 @@
         android:layout_alignParentStart="true"
         />
 
-    <TextView
-        android:id="@+id/text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edit_note"
-        android:text="Sự kiện" />
-
-    <EditText
-        android:id="@+id/edit_event"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text4"
-        android:layout_alignParentStart="true"
-        />
 
     <TextView
         android:id="@+id/text5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_event"
+        android:layout_below="@id/edit_note"
         android:text="Ví" />
     <EditText
         android:id="@+id/edit_wallet"
@@ -121,6 +84,7 @@
         android:id="@+id/edit_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:layout_below="@id/text6"
         android:layout_alignParentStart="true"
         />
