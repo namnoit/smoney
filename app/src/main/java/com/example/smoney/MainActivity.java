@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         addControls();
         addEvents();
-
     }
-
     private void addEvents() {
         bottom_view.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.nav_history:
-                    toolbar.setTitle("Lịch sử");
+                    toolbar.setTitle("Lịch sử");
                     loadFragment(new HistoryFragment());
                     return true;
                 case R.id.nav_notification:
@@ -57,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addControls() {
         toolbar = getSupportActionBar();
-        toolbar.setTitle("Lịch sử");
+        toolbar.setTitle("Lịch sử");
         bottom_view = findViewById(R.id.bottom_view);
         loadFragment(new HistoryFragment());
     }

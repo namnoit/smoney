@@ -1,0 +1,1 @@
+CREATE TABLE Table_in_out (ID integer primary key,type INTEGER,amount INTEGER,date varchar(20),comment TEXT)
