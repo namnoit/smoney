@@ -1100,6 +1100,7 @@ id edit_wallet
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id exampleedit
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
