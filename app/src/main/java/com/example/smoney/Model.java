@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
@@ -50,20 +49,15 @@ public class Model {
 
     public Model(Context ct) {
         this.context = ct;
-        Log.i("Database",context.getApplicationInfo().dataDir);
-
         processCopy();
         database = openOrCreateDatabase(context.getApplicationInfo().dataDir + DB_PATH_SUFFIX + DATABASE_NAME,null);
-
     }
 
     private void processCopy(){
         File dbFile = context.getDatabasePath(DATABASE_NAME);
-
         if (!dbFile.exists()) {
             try {
                 CopyDataBaseFromAsset();
-                Log.i("dangtest",dbFile.getPath());
                 Toast.makeText(context, "Success", Toast.LENGTH_LONG).show();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -74,6 +68,7 @@ public class Model {
     private String getDatabasePath() {
         return context.getApplicationInfo().dataDir + DB_PATH_SUFFIX + DATABASE_NAME;
     }
+
 
     public void CopyDataBaseFromAsset() {
         try {
@@ -110,7 +105,7 @@ public class Model {
     }
 
     public ArrayList<Item> getInOut(){
-        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT , null);
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT, null);
 
         ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {
@@ -127,25 +122,24 @@ public class Model {
         }
         return arrItem;
     }
-    public ArrayList<Item> getInOut(String begin, String end) {
-        String query = "select * from " + TABLE_IN_OUT + " WHERE "+FIELD_DATE +" BETWEEN " +begin+ " AND " +end;
-        Cursor c = database.rawQuery(query, null);
+    public ArrayList<Item> getInOut(String begin, String end){
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"'", null);
+
         ArrayList<Item> arrItem = new ArrayList<Item>();
-        if (c != null) {
-            if (c.moveToFirst()) {
+        if (c != null ) {
+            if  (c.moveToFirst()) {
                 do {
                     int id = c.getInt(c.getColumnIndex(FIELD_ID));
                     int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
                     long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
                     String date = c.getString(c.getColumnIndex(FIELD_DATE));
                     String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
-                    arrItem.add(new Item(id, type, amount, date, cmt));
-                } while (c.moveToNext());
+                    arrItem.add(new Item(id,type,amount,date,cmt));
+                }while (c.moveToNext());
             }
         }
         return arrItem;
     }
-
 
     public void updateInOut(int id, int type, long amount, String date, String cmt){
         ContentValues values = new ContentValues();
@@ -161,4 +155,3 @@ public class Model {
         database.delete(TABLE_IN_OUT, "ID=?", new String[]{Integer.toString(id)});
     }
 }
-

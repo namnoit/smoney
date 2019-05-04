@@ -21,8 +21,8 @@ public class detailFragment{
             switch (code){
                 case 0:break;
                 case 1:
-                    DatabaseHelper databaseHelper = new DatabaseHelper(_context);
-                    databaseHelper.deleteItem(id);
+                    Model databaseHelper = new Model(_context);
+                    databaseHelper.deleteInOut(id);
                     break;
             }
         }

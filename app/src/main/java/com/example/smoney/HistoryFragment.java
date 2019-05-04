@@ -29,6 +29,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -171,7 +173,7 @@ public class HistoryFragment extends Fragment {
     public void ProcessAccess(String durationtime){
         String year = durationtime.split("/")[1];
         String month= durationtime.split("/")[0];
-        DatabaseHelper model = new DatabaseHelper(getContext());
+        Model model = new Model(getContext());
        // Model model = new Model(getContext());
 
 
@@ -190,14 +192,14 @@ public class HistoryFragment extends Fragment {
         for(int i=0;i<19;i++){
             if(i!=5 && i!=6 && i!=7&& i!=8&&i!=9) {
                 Item item = new Item(i, i, i * 2000000, "2019/04/03", "Gucci");
-                model.addInOut(item);
+                //model.addInOut(i, i * 2000000, "2019/04/03", "Gucci");
             }
 
         }
         for(int i=0;i<19;i++){
             if(i!=5 && i!=6 && i!=7&& i!=8&&i!=9) {
                 Item item = new Item(i, i, i * 2000000, "2019/05/01", "LV");
-                model.addInOut(item);
+                //model.addInOut(i, i * 2000000, "2019/04/03", "Gucci");
             }
 
         }
@@ -307,7 +309,7 @@ public class HistoryFragment extends Fragment {
                 }
             }
             Totalcost.setText(convert(String.valueOf(totalneg)));
-            Totalcost.setTextColor(itemLinkedList.get(position).get(0).setColor(1));
+            //Totalcost.setTextColor(itemLinkedList.get(position).get(0).setColor(1));
             Totalout.setText(convert(String.valueOf(totalpos)));
             Totalout.setTextColor(itemLinkedList.get(position).get(0).setColor(0));
             ListView lviewday = convertView.findViewById(R.id.listitem);
@@ -364,7 +366,7 @@ public class HistoryFragment extends Fragment {
         }
     }
 
-    class CustomAdapterView extends BaseAdapter implements com.example.smoney.CustomAdapter {
+    class CustomAdapterView extends BaseAdapter{
         private List<Item>  ItemListPrivate;
         CustomAdapterView(List<Item> itemList){
             ItemListPrivate=itemList;
@@ -392,17 +394,15 @@ public class HistoryFragment extends Fragment {
             ImageView imageView = (ImageView)convertView.findViewById(R.id.avt);
             TextView contentitem = (TextView)convertView.findViewById(R.id.contentitem);
             TextView price = (TextView)convertView.findViewById(R.id.price);
+            Picasso.with(getContext()).load(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]).into( imageView);
 
             contentitem.setTextColor(ItemListPrivate.get(position).setColor());
             price.setTextColor(ItemListPrivate.get(position).setColor());
 
-            imageView.setImageResource(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]);
+            //imageView.setImageResource(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]);
             contentitem.setText(String.valueOf(ItemListPrivate.get(position).TypeToEnty()));
             price.setText(convert(String.valueOf(ItemListPrivate.get(position).amount)));
             return convertView;
         }
-    }
-    public class ViewHistory{
-
     }
 }

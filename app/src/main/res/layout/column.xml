@@ -18,6 +18,7 @@
             android:background="#355572"
             tools:ignore="MissingConstraints">
             <LinearLayout
+                android:layout_marginLeft="20dp"
                 android:layout_weight="0"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
@@ -60,7 +61,8 @@
                     android:gravity="right"
                     android:layout_gravity="center_vertical"
                     android:text="27"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
