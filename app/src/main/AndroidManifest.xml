@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Get_new_info"></activity>
-        <activity android:name=".Select_category" />
-        <activity android:name=".Select_wallet" />
         <activity
             android:name=".HistoryFragment"
             android:label="@string/title_activity_history_fragment"

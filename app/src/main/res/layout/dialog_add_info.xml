@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số tiền" />
+
+    <EditText
+        android:id="@+id/edit_numofmoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:hint="000.000"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_numofmoney"
+        android:text="Ngày" />
+
+    <EditText
+        android:id="@+id/edit_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="dd/mm/yy"
+        android:inputType="date"
+        android:layout_below="@id/text2"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:id="@+id/text0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_date"
+        android:text="Chi/Thu" />
+    <EditText
+        android:id="@+id/edit_chithu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="chi"
+        android:layout_below="@id/text0"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageButton
+        android:id="@+id/id_chithu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_chithu"
+        android:layout_alignRight="@+id/edit_chithu"
+        android:layout_marginTop="8dp"
+        android:foreground="@android:drawable/arrow_down_float" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_chithu"
+        android:text="Ghi chú" />
+
+    <EditText
+        android:id="@+id/edit_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_note"
+        android:text="Sự kiện" />
+
+    <EditText
+        android:id="@+id/edit_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_event"
+        android:text="Ví" />
+    <EditText
+        android:id="@+id/edit_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageButton
+        android:id="@+id/id_wallet_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_wallet"
+        android:layout_alignRight="@+id/edit_wallet"
+        android:layout_marginTop="8dp"
+        android:foreground="@android:drawable/arrow_down_float" />
+
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_wallet"
+        android:text="Mục chi tiêu" />
+    <EditText
+        android:id="@+id/edit_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text6"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageButton
+        android:id="@+id/id_cate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_category"
+        android:layout_alignRight="@+id/edit_category"
+        android:layout_marginTop="8dp"
+        android:foreground="@android:drawable/arrow_down_float" />
+</RelativeLayout>

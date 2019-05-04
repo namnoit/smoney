@@ -16,10 +16,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.smoney.Get_new_info" />
-        <activity android:name="com.example.smoney.Select_category" />
-        <activity android:name="com.example.smoney.Select_wallet" />
         <activity
             android:name="com.example.smoney.HistoryFragment"
             android:label="@string/title_activity_history_fragment"

@@ -3,6 +3,7 @@ package com.example.smoney;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,11 +27,13 @@ public class HistoryFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), Select_wallet.class);
-                startActivity(i);
-                getActivity().setTitle("jhgjh");
+                openDialog();
 
             }
         });
+    }
+    public void openDialog(){
+        AddinginfoDialog addinginfodialog = new AddinginfoDialog();
+        addinginfodialog.showNow(getChildFragmentManager(),  " ");
     }
 }

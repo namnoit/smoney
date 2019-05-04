@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/phamtphuongthao/AndroidStudioProjects/smon/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/home/phamtphuongthao/AndroidStudioProjects/smoney/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/181d5f19d6327370df14f297a02eb727/res/values-v28/values-v28.xml",
+                    "source": "/home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/81641767646cafe9b254801c28a9db5f/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

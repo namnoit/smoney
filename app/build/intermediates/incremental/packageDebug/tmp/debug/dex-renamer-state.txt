@@ -1,7 +1,7 @@
-#Sat Apr 20 17:43:55 ICT 2019
-base.0=/home/phamtphuongthao/AndroidStudioProjects/smon/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Sat May 04 14:16:39 ICT 2019
+base.0=/home/phamtphuongthao/AndroidStudioProjects/smoney/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/phamtphuongthao/AndroidStudioProjects/smon/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.1=/home/phamtphuongthao/AndroidStudioProjects/smoney/app/build/intermediates/dex/debug/mergeProjectDexDebug/out

@@ -1,188 +1,176 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/181d5f19d6327370df14f297a02eb727/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/b559fa97e1505956c09a017cce5bbd40/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/4c2175e3ff6325470febfabba8a86934/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c4bdc2fcdd111c57d5a4aa27e63414cf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9076764ab92514be8da59db16158cb2b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/dd62195c5b26a0383948b530a7df5ee6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/110e045fd74cf9955892dafa38a3d62a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6da85f677f3d5031f309d869b9528861/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee344434388390de63ee9b7ca95ca01/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5461c2824a200051ba7200a7a5a8e616/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/6e57da2770ad182472cada44fe6bdc1b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/875449ac0c57c5a95a40d2348e8360c8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7649ced8a2145fde6e8b6f5b772e29c5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/0baaa49a7d29c0ef433b08b9c64719d2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/422786ea8effccad95c52f6627c10e00/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/6bac2acda74f5a30975ff1583d3c9683/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a9444f74fbfa52e6f2bdd20fe6d2ab52/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/336c75bbd6e9e1e9ff0347b558acdff9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/47902231cf60da933d798d649c8ef27a/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c10946568071813f0392d8e0f0cc0477/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/196403ba6d7306da5ed559b5c866b4b9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3acb42704c72c2fa79f1021059a62dab/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d4e34635777ac284e66092575454463d/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a120e00ecb5b86fa3de6468d3249cb6d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0bdede8923f5f90bf897e3729d3813c8/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90e2b2311b88e6572e968e9f4849145a/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/80a5f39eaae99f2dc92cd81cd9d6afad/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/781bb12ff8c28d5df350530a5c6f4aa9/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/70f28d12416f3dd5bce2e89d08a3c9ee/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/81641767646cafe9b254801c28a9db5f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/2fd7b7fb3e0e101b797dda7c62e7dfe9/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/27803bf83a8b09419b3e28b77e1dc9d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/e4579c055c38f675243bfa79b3f4d3aa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7340bd111d436f95a15771666cc655ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5d1ce650a1e44921a209dc10318f50ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac0c411209eeb6a08b8cd4ca56211ccd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/3ef711b2256f42eb8969ff591c248aff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac56fdd42b83a7bdc7675b69d726d5ce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/38b830d5099682c997bafb72c1b2ce56/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/f7d7977bc490cfcfcd368ff963b9fbca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/cfb566eb5137f639bb637ac0ace0e938/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a5a816981be995c566f8781cb663ab6f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7432a69a732712e905b1dbcf9f624d4b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30f639530c1dfb0a04e79da693868ce4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/180f6daef3ae30f492a40457c963aedd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/240dfacfcdbd5a313c8a114214f8e546/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c089fee5e0aa3dacb7cd3159995609b0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c3cb73c405881e05f999234ed9a3cb9f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/740e5d8cf07b2e4324eeccb80a121934/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30ded3fde5443e959610159f04508ad8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5e76d7b803015eb535641b79500fe289/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d7a8e41951509db5a19e2725a8f1e29f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/97f09f974b5e27d75ec6ed3e33952e0f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d2ed1d5848a7c3f856d7c41044d9e674/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d3703fb3852d414f933554a46ea444ab/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/55e22c30b18ab292e25cd69782878b77/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ab3e16ced8a02472cf34dc5753cecd5b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a752b7d8ed672971f63766ac9136881c/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:3:5-33
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:1-28:12
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:1-25:12
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:5:5-26:19
-MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a9444f74fbfa52e6f2bdd20fe6d2ab52/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a9444f74fbfa52e6f2bdd20fe6d2ab52/AndroidManifest.xml:22:5-23:19
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:5:5-23:19
+MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/70f28d12416f3dd5bce2e89d08a3c9ee/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/70f28d12416f3dd5bce2e89d08a3c9ee/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/2fd7b7fb3e0e101b797dda7c62e7dfe9/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/2fd7b7fb3e0e101b797dda7c62e7dfe9/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c089fee5e0aa3dacb7cd3159995609b0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c089fee5e0aa3dacb7cd3159995609b0/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.example.smoney.Get_new_info
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:9-59
-	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:12:19-47
-activity#com.example.smoney.Select_category
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:13:9-53
-	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:13:19-50
-activity#com.example.smoney.Select_wallet
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:14:9-51
-	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:14:19-48
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.smoney.HistoryFragment
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:15:9-18:59
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:12:9-15:59
 	android:label
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:17:13-68
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:14:13-68
 	android:theme
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:18:13-56
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:16:13-44
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:13:13-44
 activity#com.example.smoney.MainActivity
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:19:9-25:20
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:19:19-47
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:16:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:20:13-24:29
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:23:17-77
+ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml:23:27-74
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml:20:27-74
 uses-sdk
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/1e983c307ef20e6d2fde5eaea78e7099/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/181d5f19d6327370df14f297a02eb727/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/181d5f19d6327370df14f297a02eb727/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/0cbf02b00fc93cc70e67f6fc9b4a3267/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/b559fa97e1505956c09a017cce5bbd40/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/b559fa97e1505956c09a017cce5bbd40/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/4c2175e3ff6325470febfabba8a86934/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/4c2175e3ff6325470febfabba8a86934/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c4bdc2fcdd111c57d5a4aa27e63414cf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/c4bdc2fcdd111c57d5a4aa27e63414cf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9076764ab92514be8da59db16158cb2b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/9076764ab92514be8da59db16158cb2b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/dd62195c5b26a0383948b530a7df5ee6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/dd62195c5b26a0383948b530a7df5ee6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/110e045fd74cf9955892dafa38a3d62a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/110e045fd74cf9955892dafa38a3d62a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6da85f677f3d5031f309d869b9528861/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/6da85f677f3d5031f309d869b9528861/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee344434388390de63ee9b7ca95ca01/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee344434388390de63ee9b7ca95ca01/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5461c2824a200051ba7200a7a5a8e616/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/5461c2824a200051ba7200a7a5a8e616/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/6e57da2770ad182472cada44fe6bdc1b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/6e57da2770ad182472cada44fe6bdc1b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/875449ac0c57c5a95a40d2348e8360c8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/875449ac0c57c5a95a40d2348e8360c8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7649ced8a2145fde6e8b6f5b772e29c5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/7649ced8a2145fde6e8b6f5b772e29c5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/0baaa49a7d29c0ef433b08b9c64719d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/0baaa49a7d29c0ef433b08b9c64719d2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/422786ea8effccad95c52f6627c10e00/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/422786ea8effccad95c52f6627c10e00/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/6bac2acda74f5a30975ff1583d3c9683/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/6bac2acda74f5a30975ff1583d3c9683/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/1743442e0d86ec035e60f1e6dc982814/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a9444f74fbfa52e6f2bdd20fe6d2ab52/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a9444f74fbfa52e6f2bdd20fe6d2ab52/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/336c75bbd6e9e1e9ff0347b558acdff9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/336c75bbd6e9e1e9ff0347b558acdff9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/47902231cf60da933d798d649c8ef27a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/47902231cf60da933d798d649c8ef27a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c10946568071813f0392d8e0f0cc0477/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c10946568071813f0392d8e0f0cc0477/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/196403ba6d7306da5ed559b5c866b4b9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/196403ba6d7306da5ed559b5c866b4b9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3acb42704c72c2fa79f1021059a62dab/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3acb42704c72c2fa79f1021059a62dab/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d4e34635777ac284e66092575454463d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d4e34635777ac284e66092575454463d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a120e00ecb5b86fa3de6468d3249cb6d/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/a120e00ecb5b86fa3de6468d3249cb6d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0bdede8923f5f90bf897e3729d3813c8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/0bdede8923f5f90bf897e3729d3813c8/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90e2b2311b88e6572e968e9f4849145a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90e2b2311b88e6572e968e9f4849145a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/80a5f39eaae99f2dc92cd81cd9d6afad/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/80a5f39eaae99f2dc92cd81cd9d6afad/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/781bb12ff8c28d5df350530a5c6f4aa9/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/781bb12ff8c28d5df350530a5c6f4aa9/AndroidManifest.xml:20:5-44
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/70f28d12416f3dd5bce2e89d08a3c9ee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/70f28d12416f3dd5bce2e89d08a3c9ee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/81641767646cafe9b254801c28a9db5f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/81641767646cafe9b254801c28a9db5f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/2fd7b7fb3e0e101b797dda7c62e7dfe9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/2fd7b7fb3e0e101b797dda7c62e7dfe9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/27803bf83a8b09419b3e28b77e1dc9d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/27803bf83a8b09419b3e28b77e1dc9d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/e4579c055c38f675243bfa79b3f4d3aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/e4579c055c38f675243bfa79b3f4d3aa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7340bd111d436f95a15771666cc655ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7340bd111d436f95a15771666cc655ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5d1ce650a1e44921a209dc10318f50ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5d1ce650a1e44921a209dc10318f50ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac0c411209eeb6a08b8cd4ca56211ccd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac0c411209eeb6a08b8cd4ca56211ccd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/3ef711b2256f42eb8969ff591c248aff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/3ef711b2256f42eb8969ff591c248aff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac56fdd42b83a7bdc7675b69d726d5ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ac56fdd42b83a7bdc7675b69d726d5ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/38b830d5099682c997bafb72c1b2ce56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/38b830d5099682c997bafb72c1b2ce56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/f7d7977bc490cfcfcd368ff963b9fbca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/f7d7977bc490cfcfcd368ff963b9fbca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/cfb566eb5137f639bb637ac0ace0e938/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/cfb566eb5137f639bb637ac0ace0e938/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a5a816981be995c566f8781cb663ab6f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a5a816981be995c566f8781cb663ab6f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7432a69a732712e905b1dbcf9f624d4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/7432a69a732712e905b1dbcf9f624d4b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30f639530c1dfb0a04e79da693868ce4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30f639530c1dfb0a04e79da693868ce4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/180f6daef3ae30f492a40457c963aedd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/180f6daef3ae30f492a40457c963aedd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/240dfacfcdbd5a313c8a114214f8e546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/240dfacfcdbd5a313c8a114214f8e546/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/00dd477404564c23f20de78cca22e033/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c089fee5e0aa3dacb7cd3159995609b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c089fee5e0aa3dacb7cd3159995609b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c3cb73c405881e05f999234ed9a3cb9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/c3cb73c405881e05f999234ed9a3cb9f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/740e5d8cf07b2e4324eeccb80a121934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/740e5d8cf07b2e4324eeccb80a121934/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30ded3fde5443e959610159f04508ad8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/30ded3fde5443e959610159f04508ad8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5e76d7b803015eb535641b79500fe289/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/5e76d7b803015eb535641b79500fe289/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d7a8e41951509db5a19e2725a8f1e29f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d7a8e41951509db5a19e2725a8f1e29f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/97f09f974b5e27d75ec6ed3e33952e0f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/97f09f974b5e27d75ec6ed3e33952e0f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d2ed1d5848a7c3f856d7c41044d9e674/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d2ed1d5848a7c3f856d7c41044d9e674/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d3703fb3852d414f933554a46ea444ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/d3703fb3852d414f933554a46ea444ab/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/55e22c30b18ab292e25cd69782878b77/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/55e22c30b18ab292e25cd69782878b77/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ab3e16ced8a02472cf34dc5753cecd5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/ab3e16ced8a02472cf34dc5753cecd5b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a752b7d8ed672971f63766ac9136881c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/phamtphuongthao/.gradle/caches/transforms-2/files-2.1/a752b7d8ed672971f63766ac9136881c/AndroidManifest.xml:20:5-44
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
-		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smon/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		ADDED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
+		INJECTED from /home/phamtphuongthao/AndroidStudioProjects/smoney/app/src/main/AndroidManifest.xml
