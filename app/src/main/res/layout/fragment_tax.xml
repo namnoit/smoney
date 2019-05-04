@@ -24,6 +24,7 @@
         android:layout_height="65dp"
         android:text="T11"
         android:textSize="24sp"
+        android:onClick=""
         tools:layout_editor_absoluteX="213dp"
         tools:layout_editor_absoluteY="311dp" />
 
@@ -123,11 +124,13 @@
         android:layout_height="66dp"
         android:text="T1"
         android:textSize="24sp"
+        android:onClick="generateTNCNt1"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="147dp" />
+        tools:layout_editor_absoluteY="147dp"
+        tools:ignore="OnClick" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/thueTNCN"
         style="@style/Base.Widget.MaterialComponents.TextInputEditText"
         android:layout_width="174dp"
         android:layout_height="45dp"

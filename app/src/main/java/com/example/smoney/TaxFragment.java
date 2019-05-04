@@ -20,7 +20,7 @@ public class TaxFragment extends Fragment {
     Button btnt2;
     Button btnt3;
     Button btnt4;
-    Button btnt5:
+    Button btnt5;
     Button btnt6;
     Button btnt7;
     Button btnt8;
@@ -34,21 +34,88 @@ public class TaxFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tax, container, false);
         getData(view);
-
+        processData(view);
         // Inflate the layout for this fragment
         return view;
     }
 
-    public getData(View view){
+    public void getData(View view) {
         text1 = view.findViewById(R.id.khoangiamtru);
         text2 = view.findViewById(R.id.nguoiphuthuoc);
         text3 = view.findViewById(R.id.tongthunhap);
+        text4 = view.findViewById(R.id.thueTNCN);
+
         btnt1 = view.findViewById(R.id.btnthang1);
-        btnt1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String s1 =
-            }
-        });
+        //btnt1.setOnClickListener(new View.OnClickListener() {
+        String khoangiamtru = text1.getText().toString();
+        String nguoiphuthuoc = text2.getText().toString();
+        String tongthunhap = text3.getText().toString();
+        String thueTNCN = text4.getText().toString();
+
+        text4.setText(khoangiamtru);
+    }
+
+    public void generateTNCNt1(View view){
+        text1 = view.findViewById(R.id.khoangiamtru);
+        text2 = view.findViewById(R.id.nguoiphuthuoc);
+        text3 = view.findViewById(R.id.tongthunhap);
+        text4 = view.findViewById(R.id.thueTNCN);
+        //btnt1.setOnClickListener(new View.OnClickListener() {
+        String khoangiamtru = text1.getText().toString();
+        String nguoiphuthuoc = text2.getText().toString();
+        String tongthunhap = text3.getText().toString();
+        String thueTNCN = text4.getText().toString();
+        if (khoangiamtru == "" || nguoiphuthuoc == "" || tongthunhap == ""){
+            text4.setText("unvalid input");
+        }
+    }
+
+    Model model = new Model(this.getContext());
+    public void processData(View view){
+
+    }
+
+    public float generateTNCN(float tongthunhap, int nguoiphuthuoc, float khoangiamtru){
+        //Buoc 1: thu nhap chiu thue = tong thu nhap - cac khoan mien thue
+        //Buoc 2: thu nhap tinh thue = thue nhap chiu thue - cac khoan giam tru
+        //Buoc 3: thu TNCN phai nop = thu nhap tinh thue * thue suat
+        float thunhapchiuthue = 0;
+        float cackhoanmienthue = 0;
+        float thunhaptinhthue = 0;
+        float cackhoangiamtru = 0;
+        float thueTNCNphainop = 0;
+        float thuesuat = 0;
+        //Buoc 1: tinh tong thu nhap
+        //Buoc 2: xac dinh cac khoan duoc mien thue TNCN
+        //Buoc 3: tinh thu nhap chiu thue theo ct1
+        //Buoc 4: xac dinh cac khoan giam tru
+        //Buoc 5: tinh thu nhap tinh thue theo ct2
+        //Buoc 6: tinh thue TNCN phai nop theo ct3
+        thunhapchiuthue = tongthunhap - khoangiamtru;
+        thunhaptinhthue = thunhapchiuthue - khoangiamtru;
+        if (thunhaptinhthue < 5000000){
+            thuesuat = 5/100;
+        }
+        else if (thunhaptinhthue >= 5000000 && thunhapchiuthue < 10000000){
+            thuesuat = 10/100;
+        }
+        else if (thunhaptinhthue >= 10000000 &&  thunhaptinhthue < 18000000){
+            thuesuat = 15/100;
+        }
+        else if (thunhaptinhthue >= 18000000 && thunhaptinhthue < 32000000){
+            thuesuat = 20/100;
+        }
+        else  if (thunhaptinhthue >= 32000000 && thunhaptinhthue < 52000000){
+            thuesuat = 25/100;
+        }
+        else if (thunhaptinhthue >= 52000000 && thunhaptinhthue < 80000000){
+            thuesuat = 30/100;
+        }
+        else {
+            thuesuat = 35/100;
+        }
+        thueTNCNphainop = thunhaptinhthue * thuesuat;
+
+        return thueTNCNphainop;
     }
 }
