@@ -68,9 +68,18 @@ public class TaxFragment extends Fragment {
         if (khoangiamtru == "" || nguoiphuthuoc == "" || tongthunhap == ""){
             text4.setText("unvalid input");
         }
+        float kgt = Float.valueOf(khoangiamtru);
+        float npt = Float.valueOf(nguoiphuthuoc);
+        float ttn = Float.valueOf(thueTNCN);
+        float result = generateTNCN(ttn, npt, kgt);
+
+        String hi = Float.toString(result);
+        text4.setText(hi);
+        //Model model = new Model(this.getContext());
     }
 
-    Model model = new Model(this.getContext());
+
+
     public void processData(View view){
 
     }
