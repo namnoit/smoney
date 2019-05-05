@@ -1,9 +1,10 @@
 package com.example.smoney;
 
-import android.content.Context;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.text.TextUtils;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,13 @@ import android.widget.EditText;
 
 import org.w3c.dom.Text;
 
-public class TaxFragment extends Fragment {
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
+public class TaxFragment extends Fragment {
+    private Dialog dialog;
     EditText text1;
     EditText text2;
     EditText text3;
@@ -30,13 +36,22 @@ public class TaxFragment extends Fragment {
     Button btnt10;
     Button btnt11;
     Button btnt12;
-    Context context;
+    Button btnStart;
+    float tongthunhap1 = 0;
+    int nguoiphuthuoc1 = 0;
+    float khoangiamtru1 = 0;
+    float ketqua = 0;
+    String temp ;
+    private Date begin;
+    private Date end;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tax, container, false);
-        getData(view);
-        processData(view);
+        text4 = view.findViewById(R.id.thueTNCN);
+
+        getData(view);//truyen het data vao du lieu
+        //processData(view);
         // Inflate the layout for this fragment
         return view;
     }
@@ -46,35 +61,407 @@ public class TaxFragment extends Fragment {
         text2 = view.findViewById(R.id.nguoiphuthuoc);
         text3 = view.findViewById(R.id.tongthunhap);
         text4 = view.findViewById(R.id.thueTNCN);
-
         btnt1 = view.findViewById(R.id.btnthang1);
-        //btnt1.setOnClickListener(new View.OnClickListener() {
-        String khoangiamtru = text1.getText().toString();
-        String nguoiphuthuoc = text2.getText().toString();
-        String tongthunhap = text3.getText().toString();
-        String thueTNCN = text4.getText().toString();
+        btnt2 = view.findViewById(R.id.btnthang2);
+        btnt3 = view.findViewById(R.id.btnthang3);
+        btnt4 = view.findViewById(R.id.btnthang4);
+        btnt5 = view.findViewById(R.id.btnthang5);
+        btnt6 = view.findViewById(R.id.btnthang6);
+        btnt7 = view.findViewById(R.id.btnthang7);
+        btnt9 = view.findViewById(R.id.btnthang8);
+        btnt10 = view.findViewById(R.id.btnthang10);
+        btnt11 = view.findViewById(R.id.btnthang11);
+        btnt12 = view.findViewById(R.id.btnthang12);
 
-        text4.setText(khoangiamtru);
+
+
+        btnStart = view.findViewById(R.id.btnStart);
+        //btnt1 = view.findViewById(R.id.btnthang1);
+        btnt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/01/01);
+                end = new Date(2019/01/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/02/01);
+                end = new Date(2019/01/28);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/03/01);
+                end = new Date(2019/03/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/04/01);
+                end = new Date(2019/04/30);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/05/01);
+                end = new Date(2019/05/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/06/01);
+                end = new Date(2019/06/30);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+        btnt7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/07/01);
+                end = new Date(2019/07/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+
+            }
+        });
+
+
+
+
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+                temp = Float.toString(hi);
+                text4.setText(temp);
+
+            }
+        });
+
+
+        //float ttn = Float.valueOf(thueTNCN);
+        ketqua = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
+
+
+        //text4.setText(khoangiamtru);
     }
+
+
 
     public void generateTNCNt1(View view){
-        text1 = view.findViewById(R.id.khoangiamtru);
-        text2 = view.findViewById(R.id.nguoiphuthuoc);
-        text3 = view.findViewById(R.id.tongthunhap);
-        text4 = view.findViewById(R.id.thueTNCN);
-        //btnt1.setOnClickListener(new View.OnClickListener() {
-        String khoangiamtru = text1.getText().toString();
-        String nguoiphuthuoc = text2.getText().toString();
-        String tongthunhap = text3.getText().toString();
-        String thueTNCN = text4.getText().toString();
-        if (khoangiamtru == "" || nguoiphuthuoc == "" || tongthunhap == ""){
-            text4.setText("unvalid input");
-        }
+
     }
-
-
     public void processData(View view){
-        Model model = new Model(this.getContext());
+
     }
 
     public float generateTNCN(float tongthunhap, int nguoiphuthuoc, float khoangiamtru){
@@ -96,25 +483,25 @@ public class TaxFragment extends Fragment {
         thunhapchiuthue = tongthunhap - khoangiamtru;
         thunhaptinhthue = thunhapchiuthue - khoangiamtru;
         if (thunhaptinhthue < 5000000){
-            thuesuat = 5/100;
+            thuesuat = (float) 5/100;
         }
         else if (thunhaptinhthue >= 5000000 && thunhapchiuthue < 10000000){
-            thuesuat = 10/100;
+            thuesuat = (float)10/100;
         }
         else if (thunhaptinhthue >= 10000000 &&  thunhaptinhthue < 18000000){
-            thuesuat = 15/100;
+            thuesuat = (float) 15/100;
         }
         else if (thunhaptinhthue >= 18000000 && thunhaptinhthue < 32000000){
-            thuesuat = 20/100;
+            thuesuat = (float) 20/100;
         }
         else  if (thunhaptinhthue >= 32000000 && thunhaptinhthue < 52000000){
-            thuesuat = 25/100;
+            thuesuat = (float) 25/100;
         }
         else if (thunhaptinhthue >= 52000000 && thunhaptinhthue < 80000000){
-            thuesuat = 30/100;
+            thuesuat = (float) 30/100;
         }
         else {
-            thuesuat = 35/100;
+            thuesuat = (float) 35/100;
         }
         thueTNCNphainop = thunhaptinhthue * thuesuat;
 

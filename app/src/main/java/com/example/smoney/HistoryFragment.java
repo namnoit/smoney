@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 
 import java.text.DateFormat;
@@ -53,6 +54,7 @@ public class HistoryFragment extends Fragment {
      TextView moneyremain;
     ListView lviewday=null;
     View _convertview=null;
+    FloatingActionButton fab;
 
     Context context;
     public HistoryFragment(){
@@ -77,6 +79,10 @@ public class HistoryFragment extends Fragment {
     public void openDialog1(Item item){
         EditinginfoDialog editinginfodialog = new EditinginfoDialog(item);
         editinginfodialog.showNow(getChildFragmentManager(),  " ");
+    }
+    public void openDialog(){
+        AddinginfoDialog addinginfoDialog = new AddinginfoDialog();
+        addinginfoDialog.showNow(getChildFragmentManager(),  " ");
     }
     public void onInit(){
         if (Statusbefore==false){
@@ -103,6 +109,7 @@ public class HistoryFragment extends Fragment {
         moneyout=(TextView)view.findViewById(R.id.money_out);
         moneyin = (TextView)view.findViewById(R.id.money_in);
         moneyremain=(TextView)view.findViewById(R.id.money_remain);
+        fab = view.findViewById(R.id.fab);
         buttonp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setButtonChange(true);
@@ -113,7 +120,12 @@ public class HistoryFragment extends Fragment {
                 setButtonChange(false);
             }
         });
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
 
 
         ProcessAccess(buttonc.getText().toString());
@@ -203,7 +215,7 @@ public class HistoryFragment extends Fragment {
         for(int i=0;i<19;i++){
             if(i!=5 && i!=6 && i!=7&& i!=8&&i!=9) {
                 Item item = new Item(i, i, i * 2000000, "2019/05/01", "LV");
-                //model.addInOut(i, i * 2000000, "2019/05/03", "Gucci");
+                model.addInOut(i, i * 2000000, "2019/05/03", "Gucci");
             }
 
         }
@@ -352,6 +364,7 @@ public class HistoryFragment extends Fragment {
                         public void onClick(View v) {
                              //detailFragment.onTap(0,itemListcur.get(icount).ID);
                             openDialog1(itemListcur.get(icount));
+                            ProcessAccess(buttonc.getText().toString());
                         }
                     });
                     deletetask.setOnClickListener(new View.OnClickListener(){

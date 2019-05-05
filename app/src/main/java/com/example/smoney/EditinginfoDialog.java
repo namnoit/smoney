@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -41,25 +42,7 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
         comment = item.commment;
         date = item.date;
 
-
-        builder.setView(view)
-                .setTitle("Thông tin")
-                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
-                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        ////////////////////////////////////////// id khi bam vao nut tren lich su
-                        model.updateInOut(1, editTextType.getInputType(), editTextMoney.getInputType(), editTextDate.toString(), editTextComment.toString());
-
-                    }
-                });
-
-        model = new Model(getActivity().getApplicationContext());
+        model = new Model(getActivity().getApplication());
         editTextMoney = view.findViewById(R.id.edit_numofmoney);
         String stmoney = Long.toString(money);
         editTextMoney.setText(stmoney);
@@ -72,6 +55,27 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
         editTextDate.setText(date);
         editTextComment = view.findViewById(R.id.edit_note);
         editTextComment.setText(comment);
+        builder.setView(view)
+                .setTitle("Thông tin")
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ////////////////////////////////////////// id khi bam vao nut tren lich su
+                        Log.i("iddangtim",String.valueOf(model.getInOut(item.ID)));
+                        Log.i("iddangtim",String.valueOf(item.date));
+                        model.updateInOut(item.ID, Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
+                        Log.i("idupdate",String.valueOf(model.getInOut(item.ID)));
+                    }
+                });
+
+
+
         return  builder.create();
     }
 }

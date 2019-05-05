@@ -1009,6 +1009,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_account_circle_black_24dp
+drawable ic_add
 drawable ic_delete_black_36
 drawable ic_edit_black_36
 drawable ic_history
@@ -1099,6 +1100,7 @@ id beginning
 id blocking
 id bottom
 id bottom_view
+id btnStart
 id btnthang1
 id btnthang10
 id btnthang11
@@ -1111,7 +1113,6 @@ id btnthang6
 id btnthang7
 id btnthang8
 id btnthang9
-id button
 id buttonPanel
 id cancel_action
 id center
@@ -1160,6 +1161,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1176,7 +1178,6 @@ id homeAsUp
 id icon
 id icon_group
 id id_cate_button
-id id_wallet_button
 id ifRoom
 id image
 id info
