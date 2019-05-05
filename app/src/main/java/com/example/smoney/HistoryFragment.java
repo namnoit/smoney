@@ -74,6 +74,10 @@ public class HistoryFragment extends Fragment {
         Date date = new Date();
         return String.valueOf(dateFormat.format(date)).split(" ")[0]; //2016/11/16 12:08:43
     }
+    public void openDialog1(Item item){
+        EditinginfoDialog editinginfodialog = new EditinginfoDialog(item);
+        editinginfodialog.showNow(getChildFragmentManager(),  " ");
+    }
     public void onInit(){
         if (Statusbefore==false){
             String times=String.valueOf(getTimeCurrent().split("/")[1])+"/"+getTimeCurrent().split("/")[2];
@@ -199,7 +203,7 @@ public class HistoryFragment extends Fragment {
         for(int i=0;i<19;i++){
             if(i!=5 && i!=6 && i!=7&& i!=8&&i!=9) {
                 Item item = new Item(i, i, i * 2000000, "2019/05/01", "LV");
-                //model.addInOut(i, i * 2000000, "2019/04/03", "Gucci");
+                //model.addInOut(i, i * 2000000, "2019/05/03", "Gucci");
             }
 
         }
@@ -335,7 +339,7 @@ public class HistoryFragment extends Fragment {
                     TextView TextDate = (TextView)view1.findViewById(R.id.date);
                     TextView TextComment = (TextView)view1.findViewById(R.id.comment);
 
-                    Log.i("Types",String.valueOf(itemListcur.get(icount)));
+                    //Log.i("Types",String.valueOf(itemListcur.get(icount)));
 
                     TextType.setText(String.valueOf(itemListcur.get(icount).TypeToEnty()));
                     edittask = (ImageView)view1.findViewById(R.id.edittask);
@@ -346,7 +350,8 @@ public class HistoryFragment extends Fragment {
                     edittask.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                             detailFragment.onTap(0,itemListcur.get(icount).ID);
+                             //detailFragment.onTap(0,itemListcur.get(icount).ID);
+                            openDialog1(itemListcur.get(icount));
                         }
                     });
                     deletetask.setOnClickListener(new View.OnClickListener(){
@@ -394,12 +399,12 @@ public class HistoryFragment extends Fragment {
             ImageView imageView = (ImageView)convertView.findViewById(R.id.avt);
             TextView contentitem = (TextView)convertView.findViewById(R.id.contentitem);
             TextView price = (TextView)convertView.findViewById(R.id.price);
-            Picasso.with(getContext()).load(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]).into( imageView);
+            //Picasso.with(getContext()).load(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]).into( imageView);
 
             contentitem.setTextColor(ItemListPrivate.get(position).setColor());
             price.setTextColor(ItemListPrivate.get(position).setColor());
 
-            //imageView.setImageResource(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]);
+            imageView.setImageResource(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]);
             contentitem.setText(String.valueOf(ItemListPrivate.get(position).TypeToEnty()));
             price.setText(convert(String.valueOf(ItemListPrivate.get(position).amount)));
             return convertView;

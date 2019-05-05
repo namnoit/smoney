@@ -14,12 +14,15 @@ import android.widget.TextView;
 @SuppressLint("ValidFragment")
 public class detailFragment{
         static Context _context;
+        static ImageView edit;
         public  detailFragment(Context context){
             _context=context;
         }
         public static void onTap(int code, int id){
             switch (code){
-                case 0:break;
+                case 0:
+
+                    break;
                 case 1:
                     Model databaseHelper = new Model(_context);
                     databaseHelper.deleteInOut(id);

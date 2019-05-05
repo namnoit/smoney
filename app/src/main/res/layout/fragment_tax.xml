@@ -1,11 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/textView6"
+        android:layout_width="363dp"
+        android:layout_height="41dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="90dp"
+        tools:text="Chọn tháng cần tính"
+        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang11"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T11"
+            android:textSize="24sp"
+
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="311dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang9"
+            android:layout_width="80dp"
+            android:layout_height="66dp"
+            android:text="T9"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="310dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang10"
+            android:layout_width="83dp"
+            android:layout_height="65dp"
+            android:text="T10"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="311dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang12"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T12"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="308dp"
+            tools:layout_editor_absoluteY="310dp"
+            tools:ignore="MissingConstraints"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang5"
+            android:layout_width="80dp"
+            android:layout_height="66dp"
+            android:text="T5"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang8"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T8"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang6"
+            android:layout_width="83dp"
+            android:layout_height="65dp"
+            android:text="T6"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang7"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T7"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="231dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang4"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T4"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang3"
+            android:layout_width="81dp"
+            android:layout_height="65dp"
+            android:text="T3"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang2"
+            android:layout_width="83dp"
+            android:layout_height="65dp"
+            android:text="T2"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btnthang1"
+            android:layout_width="80dp"
+            android:layout_height="66dp"
+            android:text="T1"
+            android:textSize="24sp"
+            android:onClick="generateTNCNt1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="147dp"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+
+
+
+
+<LinearLayout
+    android:layout_weight="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tax"
-        android:textSize="25sp" />
-</RelativeLayout>
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/thueTNCN"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="174dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="590dp" />
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/nguoiphuthuoc"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="156dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="473dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textView5"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="535dp"
+        tools:text="Khoản giảm trừ" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="170dp"
+            android:layout_height="52dp"
+            android:text="TextView"
+
+            android:textColor="@color/colorAccent"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="407dp"
+            tools:text="Tổng thu nhập" />
+        <EditText
+            android:id="@+id/khoangiamtru"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="156dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="530dp" />
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_weight="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="170dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        android:textColor="@color/colorAccent"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="472dp"
+        tools:text="Người phụ thuộc" />
+
+    <EditText
+        android:id="@+id/tongthunhap"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="156dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="414dp" />
+</LinearLayout>
+    <Button
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:id="@+id/button"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="593dp" />
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
