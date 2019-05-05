@@ -5,56 +5,14 @@
     android:theme="@style/Notification"
     android:orientation="vertical"
     >
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar_Noti"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/less_grey"
 
-        android:elevation="10dp"
-        app:contentInsetStart="0dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/backbtn"
-                android:background="@null"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:padding="12dp"
-                android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
-
-            <TextView
-                android:id="@+id/noti_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/noti"
-                android:textColor="#000000"
-                android:textSize="20sp"/>
-
-            <ImageButton
-                android:id="@+id/thacmac"
-                android:background="@null"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/ic_help_outline_black_24dp"
-                />
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:elevation="10dp"
-        android:gravity="center"
+
         android:orientation="vertical">
 
         <ListView
