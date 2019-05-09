@@ -247,7 +247,7 @@ public class HistoryFragment extends Fragment {
         }
         upgradeinfo("0",convert(String.valueOf(totaloutmont)));
         upgradeinfo("1",convert(String.valueOf(totalinmonth)));
-        upgradeinfo("2",convert(String.valueOf(totaloutmont-totalinmonth)));
+        upgradeinfo("2",convert(String.valueOf(totalinmonth-totaloutmont)));
         if(totalinmonth !=0 ||totaloutmont!=0) {
             CustomAdapterOneDay customAdapterOneDay = new CustomAdapterOneDay(1, 2);
             lviewday.setAdapter(customAdapterOneDay);
