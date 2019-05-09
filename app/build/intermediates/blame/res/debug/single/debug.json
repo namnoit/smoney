@@ -16,12 +16,12 @@
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_trade.png.flat",
-        "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_trade.png"
-    },
-    {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\c35d65a37d39d834a1efc18fe2e4d857\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_trade.png.flat",
+        "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_trade.png"
     },
     {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\drawable\\ic_outeating.png"
     },
     {
-        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_trade.png.flat",
-        "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-xhdpi\\ic_trade.png"
-    },
-    {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_inother.png.flat",
         "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\drawable\\ic_inother.png"
+    },
+    {
+        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_trade.png.flat",
+        "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-xhdpi\\ic_trade.png"
     },
     {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outlotto.png.flat",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-mdpi\\ic_inshopping_round.png"
     },
     {
-        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\1252f865852fc52dfd05505059212efa\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_inlotto.png.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_outlotto.png.flat",
         "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_outlotto.png"
+    },
+    {
+        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",

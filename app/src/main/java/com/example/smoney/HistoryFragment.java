@@ -331,10 +331,10 @@ public class HistoryFragment extends Fragment {
             ListView lviewday = convertView.findViewById(R.id.listitem);
 
             CustomAdapterView customAdapterView = new CustomAdapterView(itemLinkedList.get(position));
-
             final List<Item>itemListcur=itemLinkedList.get(position);
-
-            lviewday.getLayoutParams().height=customAdapterView.getCount()*170;
+            //customAdapterView.getCount()*
+            final float scale = getResources().getDisplayMetrics().density;
+            lviewday.getLayoutParams().height=(int)((customAdapterView.getCount()+1)*(61*scale));
             lviewday.setAdapter(customAdapterView);
             lviewday.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -416,7 +416,7 @@ public class HistoryFragment extends Fragment {
 
             contentitem.setTextColor(ItemListPrivate.get(position).setColor());
             price.setTextColor(ItemListPrivate.get(position).setColor());
-
+            Log.i("heighta",String.valueOf(convertView.getMeasuredHeight()));
             imageView.setImageResource(ItemListPrivate.get(position).TypeToImage[ItemListPrivate.get(position).type]);
             contentitem.setText(String.valueOf(ItemListPrivate.get(position).TypeToEnty()));
             price.setText(convert(String.valueOf(ItemListPrivate.get(position).amount)));
