@@ -1,6 +1,7 @@
 package com.example.smoney;
 
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -11,8 +12,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -20,6 +26,8 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class NotificationsFragment extends Fragment {
@@ -34,45 +42,35 @@ public class NotificationsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_notifications, container, false);
-
-
-
-
-
-
-
-
-
-        ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
+        //ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
         //ArrayAdapter<noti_item> adapter = new ArrayAdapter<noti_item>(getContext(),R.layout.row_item_dknoti,notiItems);
-        ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm dd/MM/yyyy");
-        String tm = dateFormat.format(calendar.getTime());
-        noti_item a = new noti_item(tm,"chi 50000 VND","sức khỏe");
-        noti_item b = new noti_item(tm,"chi 4000 VND","ăn uống");
-        noti_item c = new noti_item(tm,"chi 45645 VND","xổ số");
-        noti_item d = new noti_item(tm,"chi 564 VND","ăn uống");
-        notiItems.add(a);
-        notiItems.add(b);
-        notiItems.add(c);
-        notiItems.add(d);
-        notiItems.add(new noti_item(tm,"chi 4000 VND","ăn uống"));
-        notiItems.add(new noti_item(tm,"chi 4000 VND","sức khỏe"));
-        notiItems.add(new noti_item(tm,"chi 4000 VND","ăn uống"));
-        notiItems.add(new noti_item(tm,"chi 4000 VND","ăn uống"));
-        notiItems.add(new noti_item(tm,"chi 4000 VND","ăn uống"));
+        //ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);
         lv = v.findViewById(R.id.lview);
-        lv.setAdapter(adapter);
+        //lv.setAdapter(adapter);
+
+
+        write_noti_data adc = new write_noti_data();
+        ContextWrapper contextWrapper = new ContextWrapper(getActivity().getApplicationContext());
+        String filename = "internalStorage";
+        String filepath = "ThuMucCuaToi";
+        File directory = contextWrapper.getDir(filepath, Context.MODE_PRIVATE);
+        adc.mfile = new File(directory, filename);
+        adc.wr_data("chi", "ăn uống");
+        Toast.makeText(getActivity(),adc.a,Toast.LENGTH_LONG).show();
         add_not(lv);
         return v;
     }
 
     public void add_not(ListView lv){
         try {
-
-            InputStream in = getActivity().getAssets().open("notifi_dbs.txt");
-            InputStreamReader inputStreamReader = new InputStreamReader(in,"Unicode");
+            write_noti_data adc = new write_noti_data();
+            ContextWrapper contextWrapper = new ContextWrapper(getActivity().getApplicationContext());
+            String filename = "internalStorage";
+            String filepath = "ThuMucCuaToi";
+            File directory = contextWrapper.getDir(filepath, Context.MODE_PRIVATE);
+            adc.mfile = new File(directory, filename);
+            FileInputStream in = new FileInputStream(adc.mfile + "/TextFile.txt");
+            InputStreamReader inputStreamReader = new InputStreamReader(in,"UTF-8");
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
             ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);
@@ -85,12 +83,13 @@ public class NotificationsFragment extends Fragment {
                 notiItems.add(new noti_item(timet,action,sk));
                 line = bufferedReader.readLine();
             }
-
+            Collections.reverse(notiItems);
             lv.setAdapter(adapter);
         }
         catch (IOException ex){
             ex.printStackTrace();
         }
+
     }
 
 

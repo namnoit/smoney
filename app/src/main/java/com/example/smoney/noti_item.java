@@ -1,5 +1,14 @@
 package com.example.smoney;
 
+import android.support.v4.app.Fragment;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+
 public class noti_item {
     private String time;
     private String action;
@@ -30,12 +39,20 @@ public class noti_item {
         this.sk = sk;
     }
 
-
+    public noti_item() {
+    }
 
     public noti_item(String time, String action, String sk) {
         this.time = time;
         this.action = action;
         this.sk = sk;
 
+
     }
+
+    public noti_item(String action, String sk) {
+        this.action = action;
+        this.sk = sk;
+    }
+
 }

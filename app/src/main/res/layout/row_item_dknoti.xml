@@ -34,16 +34,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bạn đã thêm một lần "/>
+                android:text="Bạn đã "/>
             <TextView
                 android:id="@+id/action_noti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="chi tiêu "/>
+                android:text="xóa một hàng trong lịch sử"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" cho việc "/>
+                android:text=" về việc "/>
             <TextView
                 android:id="@+id/sk"
                 android:layout_width="wrap_content"
