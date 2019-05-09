@@ -104,8 +104,23 @@ public class Model {
         return database.insert(TABLE_IN_OUT,null,values);
     }
 
+    public Item getInOut(int id){
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT+" WHERE "+FIELD_ID+"= '"+String.valueOf(id)+"'", null);
+        if (c != null ) {
+            if  (c.moveToFirst()) {
+                id = c.getInt(c.getColumnIndex(FIELD_ID));
+                int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
+                long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
+                String date = c.getString(c.getColumnIndex(FIELD_DATE));
+                String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
+                return new Item(id,type,amount,date,cmt);
+            }
+        }
+        return null;
+    }
+
     public ArrayList<Item> getInOut(String begin, String end){
-        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT, null);
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"'", null);
 
         ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {
