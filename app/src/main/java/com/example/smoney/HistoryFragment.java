@@ -51,7 +51,7 @@ public class HistoryFragment extends Fragment {
         });
     }
     public void openDialog1(){
-        EditinginfoDialog editinginfodialog = new EditinginfoDialog();
+        EditinginfoDialog editinginfodialog = new EditinginfoDialog(new Item(1,1, 100, "abc", null));
         editinginfodialog.showNow(getChildFragmentManager(),  " ");
     }
 }

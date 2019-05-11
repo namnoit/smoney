@@ -1071,6 +1071,7 @@ id center_horizontal
 id center_vertical
 id chains
 id checkbox
+id choose_cate
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1091,12 +1092,10 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id edit_category
 id edit_date
 id edit_note
 id edit_numofmoney
 id edit_query
-id edit_wallet
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1118,8 +1117,7 @@ id home
 id homeAsUp
 id icon
 id icon_group
-id id_cate_button
-id id_wallet_button
+id id_date_button
 id ifRoom
 id image
 id info
@@ -1215,7 +1213,6 @@ id text
 id text1
 id text2
 id text3
-id text5
 id text6
 id textSpacerNoButtons
 id textSpacerNoTitle

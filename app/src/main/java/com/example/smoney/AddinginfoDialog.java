@@ -1,22 +1,35 @@
+
 package com.example.smoney;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+
+import java.util.Calendar;
 
 public class AddinginfoDialog extends AppCompatDialogFragment{
     Model model;
-    SQLiteDatabase db;
-    EditText editTextMoney, editTextDate, editTextComment, editTextType, editTextWallet;
-
+    EditText editTextMoney, editTextDate, editTextComment;
+    ImageButton date_button;
+    DatePickerDialog datePickerDialog;
+    Spinner spinner;
+    int numcate;
+    String [] array_cate = {"[Thu] Khác","[Thu] Lương", "[Thu] Buôn bán", "[Thu] Sở thích", "[Chi] Khác", "[Chi] Ăn uống", "[Chi] Sức khỏe", "[Chi] Lotteria", "[Chi] Di chuyển", "[Chi] Mua sắm", "[Chi] Hóa đơn", "[Chi] Điện thoại"};
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -24,6 +37,14 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
 
         LayoutInflater inflater  = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_add_info, null);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, array_cate);
+        spinner = view.findViewById(R.id.choose_cate);
+        spinner.setAdapter(arrayAdapter);
+        numcate = spinner.getSelectedItemPosition();
+
+        date_button = view.findViewById(R.id.id_date_button);
+        adddate(date_button);
 
         builder.setView(view)
                 .setTitle("Thông tin")
@@ -36,16 +57,48 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        model.addInOut(editTextType.getInputType(), editTextMoney.getInputType(), editTextDate.toString(), editTextComment.toString());
+                        model.addInOut(numcate, Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
 
                     }
                 });
+//Integer.parseInt(editTextType.getText().toString())
 
+        model = new Model(getActivity().getApplicationContext());
         editTextMoney = view.findViewById(R.id.edit_numofmoney);
         editTextDate = view.findViewById(R.id.edit_date);
         editTextComment = view.findViewById(R.id.edit_note);
-        editTextType = view.findViewById(R.id.edit_category);
-        editTextWallet = view.findViewById(R.id.edit_wallet);
         return  builder.create();
+    }
+
+    void adddate(ImageButton date_button){
+        date_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar =Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                datePickerDialog = new DatePickerDialog(getActivity(),
+                        android.R.style.Theme_Holo_Dialog_MinWidth,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                                month = month +1;
+                                String datec = year + "/" + month + "/" + dayOfMonth;
+                                if(month < 10){
+                                    if (dayOfMonth <10){
+                                        datec = year + "/" + "0" + month + "/" + "0"+ dayOfMonth;
+                                    }
+                                    else{
+                                        datec = year + "/" + "0" + month + "/" + dayOfMonth;
+                                    }
+                                }
+                                editTextDate.setText(datec);
+                            }
+                        },year,month,day);
+                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                datePickerDialog.show();
+            }
+        });
     }
 }
