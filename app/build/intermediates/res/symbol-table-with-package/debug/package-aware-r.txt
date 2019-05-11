@@ -1083,6 +1083,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_noti
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1194,6 +1195,7 @@ id line3
 id listMode
 id list_item
 id listitem
+id lview
 id masked
 id media_actions
 id message
@@ -1258,6 +1260,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id sk
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1299,6 +1302,7 @@ id textinput_error
 id textinput_helper_text
 id thueTNCN
 id time
+id time_t
 id title
 id titleDividerNoCustom
 id title_template
@@ -1410,6 +1414,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_item
+layout row_item_dknoti
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -36,7 +36,12 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         model.addInOut(Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
-
+                        write_noti_data WriteNoti= new write_noti_data();
+                        if (Integer.parseInt(editTextType.getText().toString())<10) {
+                            WriteNoti.create_noti("thu", String.valueOf(editTextType.getText().toString()), getContext());
+                        }else{
+                            WriteNoti.create_noti("chi", String.valueOf(editTextType.getText().toString()), getContext());
+                        }
                     }
                 });
         model = new Model(getActivity().getApplicationContext());

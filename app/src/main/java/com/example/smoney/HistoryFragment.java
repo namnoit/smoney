@@ -149,6 +149,14 @@ public class HistoryFragment extends Fragment {
         }
     }
     public static String convert(String str){
+        int value=Integer.parseInt(str);
+        //kiem tra so <0
+        if (str.length()<4)
+            return str;
+        if (value<0){
+            str=str.split("-")[1];
+        }
+        //dem so cum 3
         int numb=str.length();
         int dart = numb / 3;
         if (numb%3!=0)dart+=1;
@@ -168,8 +176,12 @@ public class HistoryFragment extends Fragment {
         }
         if (numb%3!=0)
         strnew = str.substring(0,str.length()-3*(i))+"."+strnew;
+        //kiem tra so am
+        if (value<0)
+            return "-"+strnew;
         return strnew;
     }
+    //Buntton vao theo thoi diem
     public void setButtonChange(boolean isPrevious){
         if (isPrevious){
             String daterate=getTime(buttonc.getText().toString(),true);
@@ -215,7 +227,7 @@ public class HistoryFragment extends Fragment {
         for(int i=0;i<19;i++){
             if(i!=5 && i!=6 && i!=7&& i!=8&&i!=9) {
                 Item item = new Item(i, i, i * 2000000, "2019/05/01", "LV");
-                model.addInOut(i, i * 2000000, "2019/05/03", "Gucci");
+                //model.addInOut(i, i * 2000000, "2019/05/03", "Gucci");
             }
 
         }
@@ -371,6 +383,8 @@ public class HistoryFragment extends Fragment {
                                                       @Override
                                                       public void onClick(View v) {
                                                           _detailFragment.onTap(1,itemListcur.get(icount).ID);
+                                                          write_noti_data WriteNoti= new write_noti_data();
+                                                          WriteNoti.create_noti("xoa",String.valueOf(itemListcur.get(icount)),getContext());
                                                           ProcessAccess(buttonc.getText().toString());
                                                           mydialog.dismiss();
                                                       }

@@ -70,6 +70,8 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
                         Log.i("iddangtim",String.valueOf(model.getInOut(item.ID)));
                         Log.i("iddangtim",String.valueOf(item.date));
                         model.updateInOut(item.ID, Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
+                        write_noti_data WriteNoti= new write_noti_data();
+                        WriteNoti.create_noti("sua",String.valueOf(item.type),getContext());
                         Log.i("idupdate",String.valueOf(model.getInOut(item.ID)));
                     }
                 });

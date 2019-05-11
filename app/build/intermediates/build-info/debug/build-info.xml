@@ -5,7 +5,7 @@
     build-mode="FULL"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1557127354534"
+    timestamp="1557461064434"
     token="-5199680199096878903"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -61,7 +61,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1557127354534"
+        timestamp="1557461064434"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\THUC\Documents\GitHub\smoney\app\build\intermediates\split-apk\debug\slices\slice_4.apk"

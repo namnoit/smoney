@@ -26,6 +26,7 @@ public class detailFragment{
                 case 1:
                     Model databaseHelper = new Model(_context);
                     databaseHelper.deleteInOut(id);
+
                     break;
             }
         }

@@ -360,6 +360,10 @@
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\c35d65a37d39d834a1efc18fe2e4d857\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
+        "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_item_dknoti.xml.flat",
+        "source": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\src\\main\\res\\layout\\row_item_dknoti.xml"
+    },
+    {
         "merged": "C:\\Users\\THUC\\Documents\\GitHub\\smoney\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\THUC\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\e4818e41a855d465c102f0d4543af54c\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
