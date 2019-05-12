@@ -139,7 +139,7 @@ public class Model {
        return null;
     }
     public ArrayList<Item> getInOut(String begin, String end){
-        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"'", null);
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"' ORDER BY "+FIELD_DATE, null);
 
         ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {

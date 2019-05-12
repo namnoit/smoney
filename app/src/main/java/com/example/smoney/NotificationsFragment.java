@@ -5,6 +5,7 @@ import android.content.ContextWrapper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,11 +69,17 @@ public class NotificationsFragment extends Fragment {
             String line = bufferedReader.readLine();
             String timet, action, sk;
             while (line != null){
+
                 timet = line;
+                //
                 action = bufferedReader.readLine();
+
                 sk = bufferedReader.readLine();
+
                 notiItems.add(new noti_item(timet,action,sk));
+
                 line = bufferedReader.readLine();
+
             }
             Collections.reverse(notiItems);
             lv.setAdapter(adapter);

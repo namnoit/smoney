@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
 
@@ -15,27 +15,30 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal"
-            android:background="#355572"
+            android:background="#4169E1"
             tools:ignore="MissingConstraints">
             <LinearLayout
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="0"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 >
 
                 <TextView
-                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+
                     android:id="@+id/Dayname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:textColor="#ffffff"
-
+                    android:background="@drawable/circle"
                     android:text="27"
                     android:textSize="25sp" />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginLeft="20dp"
                 android:layout_weight="5"
                 android:layout_width="100dp"
                 android:layout_height="match_parent">
@@ -62,19 +65,19 @@
                     android:layout_gravity="center_vertical"
                     android:text="27"
                     android:textSize="20sp"
-                    android:textColor="#ffffff"/>
+                    android:textColor="#ff0000"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             tools:ignore="MissingConstraints">
-
             <ListView
                 android:id="@+id/listitem"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"></ListView>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="none"></ListView>>
         </LinearLayout>
     </LinearLayout>
 

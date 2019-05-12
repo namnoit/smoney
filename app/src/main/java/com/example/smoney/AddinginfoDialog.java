@@ -1,5 +1,6 @@
 package com.example.smoney;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -12,9 +13,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
+@SuppressLint("ValidFragment")
 public class AddinginfoDialog extends AppCompatDialogFragment{
     Model model;
     EditText editTextMoney, editTextDate, editTextComment, editTextType;
+    HistoryFragment historyFragment;
+    @SuppressLint("ValidFragment")
+
+    public AddinginfoDialog(HistoryFragment _historyFragment) {
+        historyFragment = _historyFragment;
+    }
 
 
     @Override
@@ -37,11 +45,13 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
                     public void onClick(DialogInterface dialog, int which) {
                         model.addInOut(Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
                         write_noti_data WriteNoti= new write_noti_data();
+                        historyFragment.dataHistory.ProcessAccess(historyFragment.buttonc.getText().toString());
                         if (Integer.parseInt(editTextType.getText().toString())<10) {
                             WriteNoti.create_noti("thu", String.valueOf(editTextType.getText().toString()), getContext());
                         }else{
                             WriteNoti.create_noti("chi", String.valueOf(editTextType.getText().toString()), getContext());
                         }
+
                     }
                 });
         model = new Model(getActivity().getApplicationContext());

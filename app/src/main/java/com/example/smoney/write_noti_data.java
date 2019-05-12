@@ -61,23 +61,23 @@ public class write_noti_data {
             fileOutputStream.write(tm.getBytes());
             switch (action){
                 case "chi":
-                    String chi = "thêm một khoản chi chi tiêu\n";
-                    fileOutputStream.write(chi.getBytes());
+                    String chi = "thêm một khoản chi chi tiêu";
+                    fileOutputStream.write(action.getBytes());
                     fileOutputStream.write(event.getBytes());
                     break;
                 case "thu":
-                    String thu = "thêm một khoản thu nhập\n";
-                    fileOutputStream.write(thu.getBytes());
+                    String thu = "thêm một khoản thu nhập";
+                    fileOutputStream.write(action.getBytes());
                     fileOutputStream.write(event.getBytes());
                     break;
                 case "xoa":
-                    String x = "xóa một dòng trong lịch sử\n";
-                    fileOutputStream.write(x.getBytes());
+                    String x = "xóa một dòng trong lịch sử";
+                    fileOutputStream.write(action.getBytes());
                     fileOutputStream.write(event.getBytes());
                     break;
                 case "sua":
-                    String s = "Sửa một dòng trong lịch sử \n";
-                    fileOutputStream.write(s.getBytes());
+                    String s = "Sửa một dòng trong lịch sử";
+                    fileOutputStream.write(action.getBytes());
                     fileOutputStream.write(event.getBytes());
                     break;
             }

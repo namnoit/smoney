@@ -19,15 +19,16 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
     Model model;
     Item item;
     EditText editTextMoney, editTextDate, editTextComment, editTextType, editTextWallet;
+    HistoryFragment historyFragment;
     long money;
     int type;
     String comment;
     String date;
     @SuppressLint("ValidFragment")
 
-    public EditinginfoDialog(Item items){
+    public EditinginfoDialog(Item items, HistoryFragment _historyFragment){
         item=items;
-
+        historyFragment=_historyFragment;
     }
 
     @Override
@@ -67,12 +68,11 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         ////////////////////////////////////////// id khi bam vao nut tren lich su
-                        Log.i("iddangtim",String.valueOf(model.getInOut(item.ID)));
-                        Log.i("iddangtim",String.valueOf(item.date));
                         model.updateInOut(item.ID, Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
+                        historyFragment.dataHistory.ProcessAccess(historyFragment.buttonc.getText().toString());
                         write_noti_data WriteNoti= new write_noti_data();
                         WriteNoti.create_noti("sua",String.valueOf(item.type),getContext());
-                        Log.i("idupdate",String.valueOf(model.getInOut(item.ID)));
+
                     }
                 });
 

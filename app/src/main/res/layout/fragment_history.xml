@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="#4682B4"
         app:srcCompat="@drawable/ic_add"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -20,11 +20,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#b8c1b6">
+        android:background="#ffffff">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:background="#ffffff"
             android:orientation="horizontal">
 
@@ -37,8 +37,8 @@
                 <ImageView
                     android:id="@+id/previous"
                     android:layout_width="270dp"
-                    android:layout_height="50dp"
-                    android:background="#355572"
+                    android:layout_height="60dp"
+                    android:background="#4169E1"
                     android:src="@drawable/ic_left_24dp" />
                 <!-- <Button
                     android:id="@+id/previous"
@@ -57,7 +57,9 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:gravity="center"
+
+                >
 
 
                 <Button
@@ -65,11 +67,12 @@
 
                     android:layout_width="270dp"
                     android:layout_height="65dp"
-                    android:background="#355572"
-
+                    android:background="#4169E1"
                     android:text="2 2019"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+
+                    />
 
             </LinearLayout>
 
@@ -82,8 +85,8 @@
                 <ImageView
                     android:id="@+id/following"
                     android:layout_width="270dp"
-                    android:layout_height="50dp"
-                    android:background="#355572"
+                    android:layout_height="60dp"
+                    android:background="#4169E1"
                     android:src="@drawable/ic_right_24dp" />
                 <!--<Button
                     android:id="@+id/following"
@@ -99,10 +102,12 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#ffffff"
+            android:background="@drawable/round1"
             android:orientation="vertical"
+
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,16 +118,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        android:textColor="#ffffff"
+                        android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_width="match_parent"
                         android:text="Tổng quan"
                         android:layout_height="30dp"
-                        android:textSize="25sp"/>
+                        android:textSize="20sp"/>
                     <View
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#1f1a14"/>
+                        android:background="#ffff"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -141,12 +150,14 @@
                     >
 
                     <TextView
+                        android:textColor="#ffffff"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:text="Chi tiêu"
                         android:textSize="22sp" />
 
                     <TextView
+                        android:textColor="#ffffff"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:text="Thu nhập"
@@ -160,6 +171,7 @@
                     >
 
                     <TextView
+                        android:textColor="#ffffff"
                         android:id="@+id/money_out"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -168,6 +180,7 @@
                         android:textSize="22sp" />
 
                     <TextView
+                        android:textColor="#ffffff"
                         android:id="@+id/money_in"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -177,9 +190,10 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#3f3832"/>
+                        android:background="#ffffff"/>
 
                     <TextView
+                        android:textColor="#ffffff"
                         android:id="@+id/money_remain"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
@@ -190,21 +204,19 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:id="@+id/containerItem">
-
-            <ListView
-                android:id="@+id/itemthesameday"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@drawable/ic_account_circle_black_24dp">
+                android:layout_height="match_parent">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemthesameday"
+                    android:background="#ffffff"
+                    android:scrollbars="vertical">
 
-            </ListView>
+                </ListView>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
-
 </RelativeLayout>
