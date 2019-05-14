@@ -1,13 +1,7 @@
 package com.example.smoney;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.app.FragmentManager;
-import android.content.ClipData;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -16,26 +10,17 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-
-import org.w3c.dom.Text;
+import com.example.smoney.ContainClass.DataHistory;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -44,7 +29,7 @@ import java.util.List;
 public class HistoryFragment extends Fragment {
     String[] DayofWeek={"Thứ hai","Thứ ba","Thứ tư",};
     List listitme= new ArrayList();
-    LinkedList<List<Item>> itemLinkedList = new LinkedList<>();
+    public LinkedList<List<Item>> itemLinkedList = new LinkedList<>();
 
     int[] Dayth={1,2,3};
      public static Button buttonc;
@@ -58,10 +43,10 @@ public class HistoryFragment extends Fragment {
      RecyclerView recyclerView;
     //RecycleItem rItem;
      //RecycleView rView;
-    ListView lviewday=null;
+    public ListView LViewDay=null;
     View _convertview=null;
     FloatingActionButton fab;
-    DataHistory dataHistory;
+    public DataHistory dataHistory;
 
     Context context;
     public HistoryFragment(){
@@ -119,12 +104,12 @@ public class HistoryFragment extends Fragment {
         fab = view.findViewById(R.id.fab);
         buttonp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setButtonChange(true);
+                setButtonClick(true);
             }
         });
         buttonf.setOnClickListener(new View.OnClickListener(){
             public void onClick(View V){
-                setButtonChange(false);
+                setButtonClick(false);
             }
         });
 
@@ -135,12 +120,12 @@ public class HistoryFragment extends Fragment {
             }
         });
 
-        lviewday = (ListView) view.findViewById(R.id.itemthesameday);
+        LViewDay = (ListView) view.findViewById(R.id.itemthesameday);
         dataHistory.ProcessAccess(buttonc.getText().toString());
 
         return view;
     }
-    public void upgradeinfo(String code,String info){
+    public void upgradeAgrument(String code,String info){
         info.lastIndexOf(info);
         switch (code){
             case "0":
@@ -156,7 +141,7 @@ public class HistoryFragment extends Fragment {
     }
 
     //Buntton vao theo thoi diem
-    public void setButtonChange(boolean isPrevious){
+    public void setButtonClick(boolean isPrevious){
         if (isPrevious){
             String daterate=dataHistory.getTime(buttonc.getText().toString(),true);
             dataHistory.ProcessAccess(daterate);

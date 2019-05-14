@@ -214,7 +214,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/itemthesameday"
                     android:background="#ffffff"
-                    android:scrollbars="vertical">
+                    android:scrollbars="none">
 
                 </ListView>
             </LinearLayout>
