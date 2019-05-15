@@ -1,8 +1,11 @@
 package com.example.smoney;
 
+<<<<<<< HEAD
 import android.graphics.Color;
 import android.provider.MediaStore;
 
+=======
+>>>>>>> origin/feature_chart
 public class Item{
     public int ID, type;
     public long amount;
@@ -21,6 +24,7 @@ public class Item{
                 ", AMOUNT: " + Long.toString(amount) + ", DATE: " + date + ", COMMENT: " + commment;
         return s;
     }
+<<<<<<< HEAD
     public int setColor(int code){
         if (code == 0){
             return Color.parseColor("#289645");
@@ -81,4 +85,6 @@ public class Item{
             default: return null;
         }
     }
+=======
+>>>>>>> origin/feature_chart
 }
