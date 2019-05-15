@@ -9,12 +9,16 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.widget.TextView;
+=======
+import java.util.ArrayList;
+>>>>>>> origin/feature_chart
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
-
+    private Model model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void addControls() {
+        model = new Model(this);
         toolbar = getSupportActionBar();
         toolbar.hide();
         bottom_view = findViewById(R.id.bottom_view);
