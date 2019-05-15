@@ -66,12 +66,14 @@ public class NotificationsFragment extends Fragment {
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
             ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);
+            bufferedReader.readLine();
             String line = bufferedReader.readLine();
             String timet, action, sk;
             while (line != null){
 
                 timet = line;
                 //
+
                 action = bufferedReader.readLine();
 
                 sk = bufferedReader.readLine();
