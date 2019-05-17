@@ -62,7 +62,7 @@ public class write_noti_data {
                     fileOutputStream.write(event.getBytes());
                     break;
                 case "sua":
-                    String s = "xóa một dòng trong lịch sử \n";
+                    String s = "xóa một dòng trong lịch sử\n";
                     fileOutputStream.write(s.getBytes());
                     fileOutputStream.write(event.getBytes());
                     break;

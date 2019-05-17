@@ -55,8 +55,8 @@ public class NotificationsFragment extends Fragment {
         String filepath = "ThuMucCuaToi";
         File directory = contextWrapper.getDir(filepath, Context.MODE_PRIVATE);
         adc.mfile = new File(directory, filename);
-        adc.wr_data("chi", "ăn uống");
-        Toast.makeText(getActivity(),adc.a,Toast.LENGTH_LONG).show();
+        //adc.wr_data("sửa", "ăn uống");
+
         add_not(lv);
         return v;
     }
@@ -64,6 +64,8 @@ public class NotificationsFragment extends Fragment {
     public void add_not(ListView lv){
         try {
             write_noti_data adc = new write_noti_data();
+
+
             ContextWrapper contextWrapper = new ContextWrapper(getActivity().getApplicationContext());
             String filename = "internalStorage";
             String filepath = "ThuMucCuaToi";
@@ -74,6 +76,7 @@ public class NotificationsFragment extends Fragment {
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             ArrayList<noti_item> notiItems = new ArrayList<noti_item>();
             ArAdapter adapter = new ArAdapter(getContext(),R.layout.row_item_dknoti,notiItems);
+            bufferedReader.readLine();
             String line = bufferedReader.readLine();
             String timet, action, sk;
             while (line != null){
