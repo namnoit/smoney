@@ -4,22 +4,8 @@
     <string name="noti">Thông báo</string>
     <string name="chart">Biểu đồ</string>
     <string name="tax">Thuế TNCN</string>
-    <string name="begin_date">Ngày bắt đầu</string>
-    <string name="end_date">Ngày kết thúc</string>
     <string name="title_activity_history_fragment">HistoryFragment</string>
 
-    <string-array name="chart_type_array">
-        <item>Biểu đồ tròn</item>
-        <item>Biểu đồ cột</item>
-    </string-array>
-
-    <string-array name="chart_time_array">
-        <item>Tháng này</item>
-        <item>Năm nay</item>
-        <item>Tuỳ chọn</item>
-    </string-array>
-
-    <string name="chart_type_prompt">Loại biểu đồ</string>
-    <string name="chart_time_prompt">Thời gian thống kê</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

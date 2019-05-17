@@ -104,23 +104,42 @@ public class Model {
         return database.insert(TABLE_IN_OUT,null,values);
     }
 
-    public Item getInOut(int id){
-        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT+" WHERE "+FIELD_ID+"= '"+String.valueOf(id)+"'", null);
+    public ArrayList<Item> getInOut(){
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT, null);
+
+        ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {
             if  (c.moveToFirst()) {
-                id = c.getInt(c.getColumnIndex(FIELD_ID));
-                int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
-                long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
-                String date = c.getString(c.getColumnIndex(FIELD_DATE));
-                String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
-                return new Item(id,type,amount,date,cmt);
+                do {
+                    int id = c.getInt(c.getColumnIndex(FIELD_ID));
+                    int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
+                    long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
+                    String date = c.getString(c.getColumnIndex(FIELD_DATE));
+                    String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
+                    arrItem.add(new Item(id,type,amount,date,cmt));
+                }while (c.moveToNext());
             }
         }
-        return null;
+        return arrItem;
     }
+    public Item getInOut(int id){
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT+" WHERE "+FIELD_ID+"= '"+String.valueOf(id)+"'", null);
 
+        ArrayList<Item> arrItem = new ArrayList<Item>();
+        if (c != null ) {
+            if  (c.moveToFirst()) {
+                    id = c.getInt(c.getColumnIndex(FIELD_ID));
+                    int type = c.getInt(c.getColumnIndex(FIELD_TYPE));
+                    long amount = c.getLong(c.getColumnIndex(FIELD_AMOUNT));
+                    String date = c.getString(c.getColumnIndex(FIELD_DATE));
+                    String cmt = c.getString(c.getColumnIndex(FIELD_COMMENT));
+                    return new Item(id,type,amount,date,cmt);
+            }
+        }
+       return null;
+    }
     public ArrayList<Item> getInOut(String begin, String end){
-        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"'", null);
+        Cursor c = database.rawQuery("select * from " + TABLE_IN_OUT +" WHERE "+FIELD_DATE+" >= '"+begin+"' AND "+FIELD_DATE+" <='"+end+"' ORDER BY "+FIELD_DATE, null);
 
         ArrayList<Item> arrItem = new ArrayList<Item>();
         if (c != null ) {
@@ -152,4 +171,3 @@ public class Model {
         database.delete(TABLE_IN_OUT, "ID=?", new String[]{Integer.toString(id)});
     }
 }
-

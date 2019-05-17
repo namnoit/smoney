@@ -1,5 +1,6 @@
 package com.example.smoney;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -8,12 +9,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import java.util.ArrayList;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
     private BottomNavigationView bottom_view;
-    private Model model;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         addControls();
         addEvents();
     }
-
     private void addEvents() {
         bottom_view.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -34,18 +34,22 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.nav_history:
-                    toolbar.setTitle("Lịch sử");
+                    toolbar.hide();
+                    toolbar.setTitle("Lịch sử");
                     loadFragment(new HistoryFragment());
                     return true;
                 case R.id.nav_notification:
+
                     toolbar.setTitle("Thông báo");
                     loadFragment(new NotificationsFragment());
                     return true;
                 case R.id.nav_chart:
+
                     toolbar.setTitle("Biểu đồ");
                     loadFragment(new ChartFragment());
                     return true;
                 case R.id.nav_tax:
+
                     toolbar.setTitle("Tính thuế TNCN");
                     loadFragment(new TaxFragment());
                     return true;
@@ -55,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void addControls() {
-        model = new Model(this);
         toolbar = getSupportActionBar();
-        toolbar.setTitle("Lịch sử");
+        toolbar.hide();
         bottom_view = findViewById(R.id.bottom_view);
+        bottom_view.setBackgroundColor(Color.parseColor("#355572"));
         loadFragment(new HistoryFragment());
     }
 

@@ -3,48 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spinner_chart_time"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:entries="@array/chart_time_array"
-        android:minHeight="48dp"
-        android:prompt="@string/chart_time_prompt"
-        android:spinnerMode="dropdown" />
-
-    <Spinner
-        android:id="@+id/spinner_chart_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/spinner_chart_time"
-        android:entries="@array/chart_type_array"
-        android:minHeight="48dp"
-        android:prompt="@string/chart_type_prompt" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/spinner_chart_type"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp"
-        android:orientation="vertical">
-
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/pie_chart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </com.github.mikephil.charting.charts.PieChart>
-
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/bar_chart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </com.github.mikephil.charting.charts.BarChart>
-
-
-
-    </FrameLayout>
+        android:text="@string/chart"
+        android:textSize="25sp" />
 </RelativeLayout>
