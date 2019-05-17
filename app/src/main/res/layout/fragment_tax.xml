@@ -1,221 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--chon thang can tinh-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        >
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="363dp"
-        android:layout_height="41dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="90dp"
-        tools:text="Chọn tháng cần tính" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Chọn tháng cần tính"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="90dp"
 
-    <Button
-        android:id="@+id/btnthang11"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T11"
-        android:textSize="24sp"
-        android:onClick=""
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="311dp" />
+            tools:text="Chọn tháng cần tính" />
+    </LinearLayout>
+    <!--button 1 2 3 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnthang9"
-        android:layout_width="80dp"
-        android:layout_height="66dp"
-        android:text="T9"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="310dp" />
+        <Button
+            android:id="@+id/btnthang1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="generateTNCNt1"
+            android:layout_weight="1"
+            android:text="T1"
+            android:textSize="24sp"
+            tools:ignore="OnClick"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="147dp" />
 
-    <Button
-        android:id="@+id/btnthang10"
-        android:layout_width="83dp"
-        android:layout_height="65dp"
-        android:text="T10"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="311dp" />
+        <Button
+            android:id="@+id/btnthang2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T2"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="148dp" />
 
-    <Button
-        android:id="@+id/btnthang12"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T12"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="308dp"
-        tools:layout_editor_absoluteY="310dp" />
+        <Button
+            android:id="@+id/btnthang3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T3"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="148dp" />
 
-    <Button
-        android:id="@+id/btnthang5"
-        android:layout_width="80dp"
-        android:layout_height="66dp"
-        android:text="T5"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="230dp" />
+        <Button
+            android:id="@+id/btnthang4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T4"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="148dp" />
 
-    <Button
-        android:id="@+id/btnthang8"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T8"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="231dp" />
 
-    <Button
-        android:id="@+id/btnthang6"
-        android:layout_width="83dp"
-        android:layout_height="65dp"
-        android:text="T6"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="231dp" />
+    </LinearLayout>
+    <!--button 5 6 7 8 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnthang7"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T7"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="231dp" />
+        <Button
+            android:id="@+id/btnthang5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T5"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="230dp" />
 
-    <Button
-        android:id="@+id/btnthang4"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T4"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="148dp" />
+        <Button
+            android:id="@+id/btnthang6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T6"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="231dp" />
 
-    <Button
-        android:id="@+id/btnthang3"
-        android:layout_width="81dp"
-        android:layout_height="65dp"
-        android:text="T3"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="148dp" />
+        <Button
+            android:id="@+id/btnthang7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T7"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="231dp" />
 
-    <Button
-        android:id="@+id/btnthang2"
-        android:layout_width="83dp"
-        android:layout_height="65dp"
-        android:text="T2"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="148dp" />
+        <Button
+            android:id="@+id/btnthang8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T8"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="231dp" />
 
-    <Button
-        android:id="@+id/btnthang1"
-        android:layout_width="80dp"
-        android:layout_height="66dp"
-        android:text="T1"
-        android:textSize="24sp"
-        android:onClick="generateTNCNt1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="147dp"
-        tools:ignore="OnClick" />
+    </LinearLayout>
+    <!--button 9 10 11 12-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/thueTNCN"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-        android:layout_width="174dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="590dp" />
+        <Button
+            android:id="@+id/btnthang9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T9"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="310dp" />
 
-    <EditText
-        android:id="@+id/nguoiphuthuoc"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-        android:layout_width="156dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="473dp" />
+        <Button
+            android:id="@+id/btnthang10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T10"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="311dp" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="535dp"
-        tools:text="Khoản giảm trừ" />
+        <Button
+            android:id="@+id/btnthang11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T11"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteY="311dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="151dp"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="593dp" />
+        <Button
+            android:id="@+id/btnthang12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T12"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="308dp"
+            tools:layout_editor_absoluteY="310dp" />
 
-    <EditText
-        android:id="@+id/khoangiamtru"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-        android:layout_width="156dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="530dp" />
+    </LinearLayout>
+    <!--tong thu nhap-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:orientation="horizontal">
+        <!--tong thu nhap-->
+        <EditText
+            android:id="@+id/tongthunhap"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="131dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="0.0"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="414dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="170dp"
-        android:layout_height="52dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="407dp"
-        tools:text="Tổng thu nhập" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="Tổng thu nhập"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="407dp"
+            tools:text="Tổng thu nhập" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="170dp"
-        android:layout_height="46dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="472dp"
-        tools:text="Người phụ thuộc" />
 
-    <EditText
-        android:id="@+id/tongthunhap"
-        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-        android:layout_width="156dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="414dp" />
+    </LinearLayout>
+    <!--nguoi phu thuoc-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/nguoiphuthuoc"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="0"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="Người phụ thuộc"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="472dp"
+            tools:text="Người phụ thuộc" />
+
+    </LinearLayout>
+    <!--khoan giam tru-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/khoangiamtru"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="0.0"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="530dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="Khoản giảm trừ"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="535dp"
+            tools:text="Khoản giảm trừ" />
+
+
+    </LinearLayout>
+    <!--butotn start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/thueTNCN"
+            style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="0.0"
+            android:textColor="#0000FF"
+            android:inputType="numberDecimal"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="590dp" />
+
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="Start"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="593dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
