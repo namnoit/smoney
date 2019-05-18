@@ -104,7 +104,7 @@
         <LinearLayout
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             android:background="@drawable/round1"
             android:orientation="vertical"
 
@@ -152,16 +152,22 @@
                     <TextView
                         android:textColor="#ffffff"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="35dp"
                         android:text="Chi tiêu"
-                        android:textSize="22sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:textColor="#ffffff"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="35dp"
                         android:text="Thu nhập"
-                        android:textSize="22sp" />
+                        android:textSize="20sp" />
+                    <TextView
+                        android:textColor="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Số dư"
+                        android:textSize="20sp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -174,19 +180,19 @@
                         android:textColor="#ffffff"
                         android:id="@+id/money_out"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="35dp"
                         android:gravity="right"
                         android:text="1.000.000"
-                        android:textSize="22sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:textColor="#ffffff"
                         android:id="@+id/money_in"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="35dp"
                         android:gravity="right"
                         android:text="2.000.000"
-                        android:textSize="22sp" />
+                        android:textSize="20sp" />
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -196,10 +202,10 @@
                         android:textColor="#ffffff"
                         android:id="@+id/money_remain"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="35dp"
                         android:gravity="right"
                         android:text="1.000.000 "
-                        android:textSize="22sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
