@@ -1,15 +1,18 @@
 package com.example.smoney;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class TaxFragment extends Fragment {
+    private static final String TAG = "TaxFragment";
     private Dialog dialog;
     EditText text1;
     EditText text2;
@@ -68,7 +72,8 @@ public class TaxFragment extends Fragment {
         btnt5 = view.findViewById(R.id.btnthang5);
         btnt6 = view.findViewById(R.id.btnthang6);
         btnt7 = view.findViewById(R.id.btnthang7);
-        btnt9 = view.findViewById(R.id.btnthang8);
+        btnt8 = view.findViewById(R.id.btnthang8);
+        btnt9 = view.findViewById(R.id.btnthang9);
         btnt10 = view.findViewById(R.id.btnthang10);
         btnt11 = view.findViewById(R.id.btnthang11);
         btnt12 = view.findViewById(R.id.btnthang12);
@@ -79,7 +84,7 @@ public class TaxFragment extends Fragment {
         //btnt1 = view.findViewById(R.id.btnthang1);
         btnt1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 Model model = new Model(view.getContext());
                 begin = new Date(2019/01/01);
                 end = new Date(2019/01/31);
@@ -99,6 +104,7 @@ public class TaxFragment extends Fragment {
                 String khoangiamtru = text1.getText().toString();
                 String nguoiphuthuoc = text2.getText().toString();
                 String tongthunhap = text3.getText().toString();
+
                 if(TextUtils.isEmpty(text1.getText().toString()))
                 {
                     khoangiamtru1 = 0;
@@ -107,6 +113,7 @@ public class TaxFragment extends Fragment {
                 }
                 if(TextUtils.isEmpty(text2.getText().toString()))
                 {
+
                     nguoiphuthuoc1 = 0;
                 } else {
                     nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
@@ -117,11 +124,29 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 1 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
 
-
+                                }
+                            });
+                    builderSingle.show();
+                }
             }
         });
 
@@ -165,11 +190,31 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
 
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 2 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
 
+                                }
+                            });
+                    builderSingle.show();
+
+                }
             }
         });
 
@@ -213,11 +258,30 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
 
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 3 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
 
+                                }
+                            });
+                    builderSingle.show();
+                }
             }
         });
 
@@ -261,9 +325,29 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 4 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
 
 
             }
@@ -280,7 +364,7 @@ public class TaxFragment extends Fragment {
                 String strDateEnd = dateFormat.format(end);
                 String strDateBegin;
                 strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
+                arr = model.getInOut("2019/05/01","2019/05/31");
                 int in = 0;
                 int out = 0;
                 for (int x = 0; x < arr.size(); x++){
@@ -309,9 +393,29 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 5 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
 
 
             }
@@ -357,9 +461,29 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 6 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
 
 
             }
@@ -405,20 +529,53 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 7 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
 
 
             }
         });
 
-
-
-
-        btnStart.setOnClickListener(new View.OnClickListener() {
+        btnt8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/8/01);
+                end = new Date(2019/8/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
                 String khoangiamtru = text1.getText().toString();
                 String nguoiphuthuoc = text2.getText().toString();
                 String tongthunhap = text3.getText().toString();
@@ -440,6 +597,375 @@ public class TaxFragment extends Fragment {
                 } else {
                     tongthunhap1 = Float.valueOf(tongthunhap);
                 }
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 8 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
+
+
+            }
+        });
+
+        btnt9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/9/01);
+                end = new Date(2019/9/30);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 9 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
+
+
+            }
+        });
+
+        btnt10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/10/01);
+                end = new Date(2019/10/30);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 10 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
+
+
+            }
+        });
+
+        btnt11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/11/01);
+                end = new Date(2019/8/30);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 11 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
+
+
+            }
+        });
+
+        btnt12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Model model = new Model(view.getContext());
+                begin = new Date(2019/12/01);
+                end = new Date(2019/12/31);
+                ArrayList<Item> arr = new ArrayList<>();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                String strDateEnd = dateFormat.format(end);
+                String strDateBegin;
+                strDateBegin = dateFormat.format(begin);
+                arr = model.getInOut(strDateBegin,strDateEnd);
+                int in = 0;
+                int out = 0;
+                for (int x = 0; x < arr.size(); x++){
+                    if (arr.get(x).type < 10) in += arr.get(x).amount;
+                    else out += arr.get(x).amount;
+                }
+
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
+                if (in != 0){
+                    text1.setText(Float.toString(in));
+                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
+                    temp = Float.toString(hi);
+                    text4.setText(temp);
+                }
+                else {
+                    //thong bao la thang nay chua co thu nhap
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Thông báo");
+                    builderSingle.setMessage("Tháng 12 chưa có thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+                }
+
+
+            }
+        });
+
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String khoangiamtru = text1.getText().toString();
+                String nguoiphuthuoc = text2.getText().toString();
+                String tongthunhap = text3.getText().toString();
+                if(TextUtils.isEmpty(text1.getText().toString()))
+                {
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Nhắc nhở");
+                    builderSingle.setMessage("Vui lòng nhập mục Khoản giảm trừ");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+
+                    khoangiamtru1 = 0;
+                } else {
+                    khoangiamtru1 = Float.valueOf(khoangiamtru);
+                }
+                if(TextUtils.isEmpty(text2.getText().toString()))
+                {
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Nhắc nhở");
+                    builderSingle.setMessage("Vui lòng nhập mục Người phụ thuộc");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+
+                    nguoiphuthuoc1 = 0;
+                } else {
+                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
+                }
+                if(TextUtils.isEmpty(text3.getText().toString()))
+                {
+                    //neu de trong thi xu ly nhu the nao
+                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                    builderSingle.setIcon(R.mipmap.ic_launcher);
+                    builderSingle.setTitle("Nhắc nhở");
+                    builderSingle.setMessage("Vui lòng nhập mục Tổng thu nhập");
+                    builderSingle.setPositiveButton(
+                            "OK",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    builderSingle.show();
+
+                    tongthunhap1 = 0;
+                } else {
+                    tongthunhap1 = Float.valueOf(tongthunhap);
+                }
                 float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
                 temp = Float.toString(hi);
                 text4.setText(temp);
@@ -453,15 +979,6 @@ public class TaxFragment extends Fragment {
 
 
         //text4.setText(khoangiamtru);
-    }
-
-
-
-    public void generateTNCNt1(View view){
-
-    }
-    public void processData(View view){
-
     }
 
     public float generateTNCN(float tongthunhap, int nguoiphuthuoc, float khoangiamtru){

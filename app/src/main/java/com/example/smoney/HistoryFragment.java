@@ -85,11 +85,9 @@ public class HistoryFragment extends Fragment {
         }else
         buttonc.setText(timestamp);
     }
+    @SuppressLint("WrongViewCast")
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
         View view;
         view = inflater.inflate(R.layout.fragment_history, container, false);
         context=getContext();
