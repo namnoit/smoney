@@ -5,18 +5,14 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,10 +20,11 @@ import java.util.Date;
 public class TaxFragment extends Fragment {
     private static final String TAG = "TaxFragment";
     private Dialog dialog;
-    EditText text1;
-    EditText text2;
-    EditText text3;
-    EditText text4;
+    public float _tongthunhap_Start_ = 0;
+    EditText text_khoangiamtru;
+    EditText text_nguoiphuthuoc;
+    EditText text_tongthunhap;
+    EditText text_thueTNCN;
     Button btnt1;
     Button btnt2;
     Button btnt3;
@@ -41,9 +38,9 @@ public class TaxFragment extends Fragment {
     Button btnt11;
     Button btnt12;
     Button btnStart;
-    float tongthunhap1 = 0;
-    int nguoiphuthuoc1 = 0;
-    float khoangiamtru1 = 0;
+    float _tongthunhapData_ = 0;
+    float _nguoiphuthuocData_ = 0;
+    float _khoangiamtruData_ = 0;
     float ketqua = 0;
     String temp ;
     private Date begin;
@@ -52,7 +49,7 @@ public class TaxFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tax, container, false);
-        text4 = view.findViewById(R.id.thueTNCN);
+//        text_thueTNCN = view.findViewById(R.id.thueTNCN);
 
         getData(view);//truyen het data vao du lieu
         //processData(view);
@@ -61,10 +58,10 @@ public class TaxFragment extends Fragment {
     }
 
     public void getData(View view) {
-        text1 = view.findViewById(R.id.khoangiamtru);
-        text2 = view.findViewById(R.id.nguoiphuthuoc);
-        text3 = view.findViewById(R.id.tongthunhap);
-        text4 = view.findViewById(R.id.thueTNCN);
+        text_khoangiamtru = view.findViewById(R.id.khoangiamtru);
+        text_nguoiphuthuoc = view.findViewById(R.id.nguoiphuthuoc);
+        text_tongthunhap = view.findViewById(R.id.tongthunhap);
+        text_thueTNCN = view.findViewById(R.id.thueTNCN);
         btnt1 = view.findViewById(R.id.btnthang1);
         btnt2 = view.findViewById(R.id.btnthang2);
         btnt3 = view.findViewById(R.id.btnthang3);
@@ -77,62 +74,32 @@ public class TaxFragment extends Fragment {
         btnt10 = view.findViewById(R.id.btnthang10);
         btnt11 = view.findViewById(R.id.btnthang11);
         btnt12 = view.findViewById(R.id.btnthang12);
-
-
-
         btnStart = view.findViewById(R.id.btnStart);
-        //btnt1 = view.findViewById(R.id.btnthang1);
+
         btnt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/01/01);
-                end = new Date(2019/01/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/01/01","2019/01/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -142,7 +109,8 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");
+                                    text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
@@ -154,52 +122,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/02/01);
-                end = new Date(2019/01/28);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/02/01","2019/02/28");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
                 }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
-                }
-
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -209,11 +151,10 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
-
                 }
             }
         });
@@ -222,52 +163,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/03/01);
-                end = new Date(2019/03/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/03/01","2019/03/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
                 }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
-                }
-
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -277,7 +192,7 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
@@ -289,51 +204,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/04/01);
-                end = new Date(2019/04/30);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/04/01","2019/04/30");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -343,13 +233,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -357,67 +245,40 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/05/01);
-                end = new Date(2019/05/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/05/01","2019/05/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
                 }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
-                }
-                if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
-                }
-                else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
-                    final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
-                    builderSingle.setIcon(R.mipmap.ic_launcher);
-                    builderSingle.setTitle("Thông báo");
-                    builderSingle.setMessage("Tháng 5 chưa có thu nhập");
-                    builderSingle.setPositiveButton(
-                            "OK",
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                }
-                            });
-                    builderSingle.show();
-                }
-
-
+                    if (in != 0){
+                        _tongthunhap_Start_ = in;
+                        if (in >= 1000000){
+                            float _round_ = (float) in/1000000;
+                            String output = Float.toString(_round_);
+                            output += " triệu ";
+                            text_tongthunhap.setText(output);
+                        }
+                        else {
+                            text_tongthunhap.setText(Float.toString(in));
+                        }
+                    }
+                    else {
+                        final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
+                        builderSingle.setIcon(R.mipmap.ic_launcher);
+                        builderSingle.setTitle("Thông báo");
+                        builderSingle.setMessage("Tháng 5 chưa có thu nhập");
+                        builderSingle.setPositiveButton(
+                                "OK",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        text_tongthunhap.setText("");text_thueTNCN.setText("");
+                                    }
+                                });
+                        builderSingle.show();
+                    }
             }
         });
 
@@ -425,51 +286,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/06/01);
-                end = new Date(2019/06/30);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/06/01","2019/06/30");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -479,13 +315,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -493,51 +327,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/07/01);
-                end = new Date(2019/07/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/07/01","2019/07/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -547,13 +356,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -561,51 +368,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/8/01);
-                end = new Date(2019/8/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/08/01","2019/08/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -615,7 +397,7 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
@@ -629,51 +411,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/9/01);
-                end = new Date(2019/9/30);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/09/01","2019/09/30");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -683,13 +440,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -697,51 +452,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/10/01);
-                end = new Date(2019/10/30);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/10/01","2019/10/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -751,13 +481,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -765,51 +493,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/11/01);
-                end = new Date(2019/8/30);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/11/01","2019/11/30");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -819,13 +522,11 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
@@ -833,51 +534,26 @@ public class TaxFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Model model = new Model(view.getContext());
-                begin = new Date(2019/12/01);
-                end = new Date(2019/12/31);
                 ArrayList<Item> arr = new ArrayList<>();
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-                String strDateEnd = dateFormat.format(end);
-                String strDateBegin;
-                strDateBegin = dateFormat.format(begin);
-                arr = model.getInOut(strDateBegin,strDateEnd);
-                int in = 0;
-                int out = 0;
+                arr = model.getInOut("2019/12/01","2019/12/31");
+                float in = 0;
                 for (int x = 0; x < arr.size(); x++){
                     if (arr.get(x).type < 10) in += arr.get(x).amount;
-                    else out += arr.get(x).amount;
-                }
-
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
-                }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
-                }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
                 if (in != 0){
-                    text1.setText(Float.toString(in));
-                    float hi = generateTNCN(in, nguoiphuthuoc1, khoangiamtru1);
-                    temp = Float.toString(hi);
-                    text4.setText(temp);
+                    _tongthunhap_Start_ = in;
+                    if (in >= 1000000){
+                        float _round_ = (float) in/1000000;
+                        String output = Float.toString(_round_);
+                        output += " triệu ";
+                        text_tongthunhap.setText(output);
+                    }
+                    else {
+                        text_tongthunhap.setText(Float.toString(in));
+                    }
                 }
                 else {
-                    //thong bao la thang nay chua co thu nhap
-                    //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Thông báo");
@@ -887,45 +563,33 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");text_thueTNCN.setText("");
                                 }
                             });
                     builderSingle.show();
                 }
-
-
             }
         });
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String khoangiamtru = text1.getText().toString();
-                String nguoiphuthuoc = text2.getText().toString();
-                String tongthunhap = text3.getText().toString();
-                if(TextUtils.isEmpty(text1.getText().toString()))
-                {
-                    //neu de trong thi xu ly nhu the nao
+                if (_tongthunhap_Start_ == 0 || TextUtils.isEmpty(text_tongthunhap.getText().toString())){
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Nhắc nhở");
-                    builderSingle.setMessage("Vui lòng nhập mục Khoản giảm trừ");
+                    builderSingle.setMessage("Vui lòng chọn tháng");
                     builderSingle.setPositiveButton(
                             "OK",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_tongthunhap.setText("");
                                 }
                             });
                     builderSingle.show();
-
-                    khoangiamtru1 = 0;
-                } else {
-                    khoangiamtru1 = Float.valueOf(khoangiamtru);
                 }
-                if(TextUtils.isEmpty(text2.getText().toString()))
-                {
+                else if(TextUtils.isEmpty(text_nguoiphuthuoc.getText().toString())) {
                     //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
@@ -936,59 +600,42 @@ public class TaxFragment extends Fragment {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_nguoiphuthuoc.setText("");
                                 }
                             });
                     builderSingle.show();
-
-                    nguoiphuthuoc1 = 0;
-                } else {
-                    nguoiphuthuoc1 = Integer.parseInt(nguoiphuthuoc);
                 }
-                if(TextUtils.isEmpty(text3.getText().toString()))
-                {
+                else if(TextUtils.isEmpty(text_khoangiamtru.getText().toString())) {
                     //neu de trong thi xu ly nhu the nao
                     final android.support.v7.app.AlertDialog.Builder builderSingle = new android.support.v7.app.AlertDialog.Builder(view.getContext());
                     builderSingle.setIcon(R.mipmap.ic_launcher);
                     builderSingle.setTitle("Nhắc nhở");
-                    builderSingle.setMessage("Vui lòng nhập mục Tổng thu nhập");
+                    builderSingle.setMessage("Vui lòng nhập mục Khoản giảm trừ");
                     builderSingle.setPositiveButton(
                             "OK",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-
+                                    text_khoangiamtru.setText("");
                                 }
                             });
                     builderSingle.show();
-
-                    tongthunhap1 = 0;
-                } else {
-                    tongthunhap1 = Float.valueOf(tongthunhap);
                 }
-                float hi = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-                temp = Float.toString(hi);
-                text4.setText(temp);
-
+                else {
+                    float hi = generateTNCN(_tongthunhap_Start_, _nguoiphuthuocData_, _khoangiamtruData_);
+                    temp = Float.toString(hi);
+                    text_thueTNCN.setText(temp);
+                }
             }
         });
-
-
-        //float ttn = Float.valueOf(thueTNCN);
-        ketqua = generateTNCN(tongthunhap1, nguoiphuthuoc1, khoangiamtru1);
-
-
-        //text4.setText(khoangiamtru);
     }
 
-    public float generateTNCN(float tongthunhap, int nguoiphuthuoc, float khoangiamtru){
+    public float generateTNCN(float tongthunhap, float nguoiphuthuoc, float khoangiamtru){
         //Buoc 1: thu nhap chiu thue = tong thu nhap - cac khoan mien thue
         //Buoc 2: thu nhap tinh thue = thue nhap chiu thue - cac khoan giam tru
         //Buoc 3: thu TNCN phai nop = thu nhap tinh thue * thue suat
         float thunhapchiuthue = 0;
-        float cackhoanmienthue = 0;
         float thunhaptinhthue = 0;
-        float cackhoangiamtru = 0;
         float thueTNCNphainop = 0;
         float thuesuat = 0;
         //Buoc 1: tinh tong thu nhap
@@ -1022,6 +669,6 @@ public class TaxFragment extends Fragment {
         }
         thueTNCNphainop = thunhaptinhthue * thuesuat;
 
-        return thueTNCNphainop;
+        return thueTNCNphainop - nguoiphuthuoc * 150000;
     }
 }

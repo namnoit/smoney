@@ -47,9 +47,11 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
                         write_noti_data WriteNoti= new write_noti_data();
                         historyFragment.dataHistory.ProcessAccess(historyFragment.buttonc.getText().toString());
                         if (Integer.parseInt(editTextType.getText().toString())<10) {
-                            WriteNoti.create_noti("thu", String.valueOf(editTextType.getText().toString()), getContext());
+                            Item itemtemp= new Item();
+                            WriteNoti.create_noti("thu", String.valueOf(itemtemp.TypeToEnty(Integer.parseInt(editTextType.getText().toString()))), getContext());
                         }else{
-                            WriteNoti.create_noti("chi", String.valueOf(editTextType.getText().toString()), getContext());
+                            Item itemtemp= new Item();
+                            WriteNoti.create_noti("chi", String.valueOf(itemtemp.TypeToEnty(Integer.parseInt(editTextType.getText().toString()))), getContext());
                         }
 
                     }

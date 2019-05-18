@@ -71,7 +71,8 @@ public class EditinginfoDialog extends AppCompatDialogFragment {
                         model.updateInOut(item.ID, Integer.parseInt(editTextType.getText().toString()), Long.parseLong(editTextMoney.getText().toString()), editTextDate.getText().toString(), editTextComment.getText().toString());
                         historyFragment.dataHistory.ProcessAccess(historyFragment.buttonc.getText().toString());
                         write_noti_data WriteNoti= new write_noti_data();
-                        WriteNoti.create_noti("sua",String.valueOf(item.type),getContext());
+                        Item itemtemp= new Item();
+                        WriteNoti.create_noti("sua", String.valueOf(itemtemp.TypeToEnty(Integer.parseInt(editTextType.getText().toString()))), getContext());
 
                     }
                 });

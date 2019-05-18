@@ -29,7 +29,7 @@ public class DialogIDE {
                                               final detailFragment _detailFragment=new detailFragment(dataHistory.historyFragment.getContext());
                                               _detailFragment.onTap(1,ItemIsPointed.ID);
                                               write_noti_data WriteNoti= new write_noti_data();
-                                              WriteNoti.create_noti("xoa",String.valueOf(ItemIsPointed),dataHistory.historyFragment.getContext());
+                                              WriteNoti.create_noti("xoa", String.valueOf(ItemIsPointed.TypeToEnty()), dataHistory.historyFragment.getContext());
                                               dataHistory.ProcessAccess(dataHistory.historyFragment.buttonc.getText().toString());
                                               dialogOfDelAndEditFunc.dismiss();
                                           }

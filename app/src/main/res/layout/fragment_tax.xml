@@ -290,6 +290,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="0.0"
+            android:enabled="false"
             android:textColor="#0000FF"
             android:inputType="numberDecimal"
             tools:layout_editor_absoluteX="26dp"
@@ -305,6 +306,7 @@
             android:gravity="center"
             android:text="Start"
             android:textSize="24sp"
+
             android:textStyle="bold"
             tools:layout_editor_absoluteX="222dp"
             tools:layout_editor_absoluteY="593dp" />
