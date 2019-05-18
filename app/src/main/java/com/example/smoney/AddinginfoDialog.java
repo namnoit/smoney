@@ -29,7 +29,7 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
     DatePickerDialog datePickerDialog;
     Spinner spinner;
     int numcate;
-    String [] array_cate = {"[Thu] Khác","[Thu] Lương", "[Thu] Buôn bán", "[Thu] Sở thích", "[Chi] Khác", "[Chi] Ăn uống", "[Chi] Sức khỏe", "[Chi] Lotteria", "[Chi] Di chuyển", "[Chi] Mua sắm", "[Chi] Hóa đơn", "[Chi] Điện thoại"};
+    String [] array_cate = {"[Thu] Khác","[Thu] Lương", "[Thu] Buôn bán", "[Thu] Lotteria",  "[Thu] Sở thích", "[Chi] Khác", "[Chi] Ăn uống", "[Chi] Sức khỏe", "[Chi] Lotteria", "[Chi] Di chuyển", "[Chi] Mua sắm", "[Chi] Hóa đơn", "[Chi] Điện thoại", "[Chi] Gas"};
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -41,7 +41,35 @@ public class AddinginfoDialog extends AppCompatDialogFragment{
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, array_cate);
         spinner = view.findViewById(R.id.choose_cate);
         spinner.setAdapter(arrayAdapter);
-        numcate = spinner.getSelectedItemPosition();
+        switch (spinner.getSelectedItemPosition()){
+            case(5):
+                numcate = 10;
+                break;
+            case(6):
+                numcate = 11;
+                break;
+            case(7):
+                numcate = 12;
+                break;
+            case(8):
+                numcate = 13;
+                break;
+            case(9):
+                numcate = 14;
+            case(10):
+                numcate = 15;
+            case(11):
+                numcate = 16;
+            case(12):
+                numcate = 17;
+                break;
+            case(13):
+                numcate = 18;
+            default:
+                numcate = spinner.getSelectedItemPosition();
+                break;
+        }
+
 
         date_button = view.findViewById(R.id.id_date_button);
         adddate(date_button);
