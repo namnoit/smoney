@@ -27,38 +27,48 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/HistoryFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
+              <folding>
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="75" selection-start-line="73" selection-start-column="24" selection-end-line="75" />
+            <state relative-caret-position="204">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/ContainClass/detailFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_add_info.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/ContainClass/DataHistory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-981">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
+            <state relative-caret-position="-510" />
           </provider>
         </entry>
       </file>
@@ -80,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="1768">
               <caret line="182" column="49" selection-start-line="182" selection-start-column="49" selection-end-line="182" selection-end-column="49" />
               <folding>
                 <element signature="e#877#3534#0" />
@@ -141,12 +151,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_row_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/TaxFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/Item.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/ContainClass/DialogIDE.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/column.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog1.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog.java" />
       </list>
     </option>
   </component>
@@ -207,8 +218,8 @@
       <recent name="C:\Users\THUC\Documents\GitHub\smoneynew\app\src\main\res\layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\THUC\Documents\GitHub\smoneynew\app\src\main\res\layout" />
       <recent name="C:\Users\THUC\Documents\GitHub\smoneynew\app\src\main\java\com\example\smoney" />
+      <recent name="C:\Users\THUC\Documents\GitHub\smoneynew\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -303,7 +314,7 @@
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.32980332" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.32980332" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Build Variants" order="5" side_tool="true" />
@@ -318,25 +329,18 @@
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Logcat" order="8" weight="0.3289689" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Hierarchy" order="6" weight="0.32980332" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/HistoryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/NotificationsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-831">
@@ -387,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/ContainClass/detailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -412,13 +409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="75" selection-start-line="73" selection-start-column="24" selection-end-line="75" />
         </state>
       </provider>
     </entry>
@@ -455,11 +445,63 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_history.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
+        <state relative-caret-position="1768">
           <caret line="182" column="49" selection-start-line="182" selection-start-column="49" selection-end-line="182" selection-end-column="49" />
           <folding>
             <element signature="e#877#3534#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="86" column="59" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_add_info.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/AddinginfoDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
+          <folding>
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/HistoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smoney/EditinginfoDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
